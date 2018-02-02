@@ -1,0 +1,122 @@
+/* Global Fonts
+================================================== */
+$font-light: 'Open Sans Condensed', sans-serif;
+$font-bold: 'Anton', sans-serif;
+$font-extra: 'Abril Fatface', cursive;
+
+/* Global Colors
+================================================== */
+$white : #fff;
+$black : #000;
+$light-grey : #e9ecef;
+$norm-grey  : rgba(86, 61, 124, .2);
+$dark-grey  : #343a40;
+
+$cactus : rgb(39, 109, 96);
+$forest : rgb(38, 77, 73);
+$ebony  : rgb(9, 15, 17);
+$grey   : rgb(198, 199, 199);
+$peach  : rgb(244, 212, 202);
+$pearl  : rgb(251, 237, 230);
+
+/*borders*/
+$border: 1px solid rgba(86, 61, 124, .2);
+
+
+/* Setup
+================================================== */
+body, html{
+  min-width: 320px;
+}
+
+a{ color: $cactus;}
+
+
+/* Wrapper - Sidebar - Container
+================================================== */
+#wrapper{
+  min-height: 100%;
+
+  background: $pearl;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+
+  #container{
+    position: absolute;
+
+    padding: 20px;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    top:0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+
+    background: #fff;
+    font-family: 'Anton';
+    color: $cactus;
+
+      h1, h4{
+        font-family: 'Anton';
+        color: $cactus;
+        text-align: center;
+        margin-top: 2em;
+      }
+
+      h4{
+        font-family: 'Open Sans Condensed';
+        margin-top:0.5em;
+        color: $forest;
+      }
+
+      .line{
+          display:inline-block;
+          height: 0.5em;
+          width:110%;
+          background: $pearl;
+          margin: 0.5em 0 0.5em 0;
+          position: relative;
+          left: -4em;
+      }
+
+    .row{
+      margin:0.5em 0 0 0;
+
+      .col{
+
+        h5{
+          color: $cactus;
+        }
+
+        i{
+          color: $grey;
+        }
+
+
+          span{
+            font-family: 'Open Sans Condensed';
+            color: $ebony;
+          }
+
+      }
+    }
+  }
+
+  .circle{
+    height: 10em;
+    width: 10em;
+    margin: 0 auto;
+
+    border:0.25em solid $pearl;
+    border-radius: 100%;
+    background: #fff;
+
+    position: relative;
+    top: 1em;
+  }
+}

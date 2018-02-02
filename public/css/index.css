@@ -1,0 +1,70 @@
+/* Global Fonts
+================================================== */
+/* Global Colors
+================================================== */
+/*borders*/
+/* Setup
+================================================== */
+body, html {
+  min-width: 320px; }
+
+a {
+  color: #276d60; }
+
+/* Wrapper - Sidebar - Container
+================================================== */
+#wrapper {
+  min-height: 100%;
+  background: #fbede6;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  #wrapper #container {
+    position: absolute;
+    padding: 20px;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: #fff;
+    font-family: 'Anton';
+    color: #276d60; }
+    #wrapper #container h1, #wrapper #container h4 {
+      font-family: 'Anton';
+      color: #276d60;
+      text-align: center;
+      margin-top: 2em; }
+    #wrapper #container h4 {
+      font-family: 'Open Sans Condensed';
+      margin-top: 0.5em;
+      color: #264d49; }
+    #wrapper #container .line {
+      display: inline-block;
+      height: 0.5em;
+      width: 110%;
+      background: #fbede6;
+      margin: 0.5em 0 0.5em 0;
+      position: relative;
+      left: -4em; }
+    #wrapper #container .row {
+      margin: 0.5em 0 0 0; }
+      #wrapper #container .row .col h5 {
+        color: #276d60; }
+      #wrapper #container .row .col i {
+        color: #c6c7c7; }
+      #wrapper #container .row .col span {
+        font-family: 'Open Sans Condensed';
+        color: #090f11; }
+  #wrapper .circle {
+    height: 10em;
+    width: 10em;
+    margin: 0 auto;
+    border: 0.25em solid #fbede6;
+    border-radius: 100%;
+    background: #fff;
+    position: relative;
+    top: 1em; }
