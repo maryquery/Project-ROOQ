@@ -36,7 +36,8 @@ a{ color: $cactus;}
 ================================================== */
 #wrapper{
   min-height: 100%;
-
+  padding-top: 6em;
+  padding-left: 2.2em;
   background: $pearl;
 
   -webkit-transition: all 0.5s ease;
@@ -44,79 +45,330 @@ a{ color: $cactus;}
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 
-
-  #container{
-    position: absolute;
-
+  section{
     padding: 20px;
-    width: 80vw;
-    height: 80vh;
-    margin: auto;
-    top:0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    width: 70vw;
+    margin: 0 auto;
 
     background: #fff;
-    font-family: 'Anton';
+    font-family: $font-bold;
     color: $cactus;
 
-      h1, h4{
-        font-family: 'Anton';
-        color: $cactus;
-        text-align: center;
-        margin-top: 2em;
-      }
+    &#header{
+      height: 20vh;
 
-      h4{
-        font-family: 'Open Sans Condensed';
-        margin-top:0.5em;
-        color: $forest;
-      }
+      background: #fff;
+      font-family: $font-bold;
+      color: $cactus;
 
-      .line{
-          display:inline-block;
-          height: 0.5em;
-          width:110%;
-          background: $pearl;
-          margin: 0.5em 0 0.5em 0;
-          position: relative;
-          left: -4em;
-      }
+      .row{
+        padding-top: 4em;
 
-    .row{
-      margin:0.5em 0 0 0;
-
-      .col{
-
-        h5{
+        h1,h4{
+          font-family: $font-bold;
           color: $cactus;
+          display: block;
+          width: 100%;
+          text-align: center;
         }
-
-        i{
-          color: $grey;
+        h4{
+          font-family: $font-light;
+          color: $forest;
         }
+      }
+    }
 
+    &#container{
+      padding: 20px;
+      width: 70vw;
+      height: auto;
+      margin-top: 1em;
 
-          span{
-            font-family: 'Open Sans Condensed';
-            color: $ebony;
+      .row{
+        margin:0.5em 0 0 0;
+
+        [class*="col-"]{
+
+          h5{
+            color: $cactus;
           }
 
+          span{
+            font-family: $font-light;
+            color: $ebony;
+            font-weight: normal;
+          }
+
+        }
+      }
+
+      #educationTable{
+        position: relative;
+        font-family: $font-light;
+        color: $forest;
+
+        tr{
+          margin:0 0 0.5em 0;
+          border-bottom: 1em solid #fff;
+
+          td{
+            font-weight:bold;
+
+            &:nth-child(2n){
+              background: $pearl;
+              padding: 1em 1em;
+              font-weight: normal;
+              display: block;
+              margin-left: 3em;
+            }
+          }
+        }
+
+        &:before{
+          content:"";
+          position: absolute;
+          left: 3em;
+          display:block;
+          width: 0.25em;
+          height: 100%;
+          background: $cactus;
+        }
+      }
+
+      #experienceTable{
+        font-family: $font-light;
+        width: 80%;
+
+        tr{
+          border-bottom: 1em solid #fff;
+
+          td{
+            width: 40%;
+            border-right: 1em solid #fff;
+
+            span{
+              display: block;
+              width: 100%;
+              font-weight: bold;
+              color: $forest;
+
+              &:nth-of-type(2n){
+                font-weight: normal;
+              }
+            }
+
+            &:nth-of-type(2n){
+              width: 60%;
+              background: $grey;
+              padding: 0.5em 1em;
+              border-right: 0em;
+            }
+          }
+        }
+      }
+
+      //Skills
+      #skills{
+        margin: 1em 0 0 0;
+
+        .row{
+
+          i{
+            color: $forest;
+            font-size: 2em;
+          }
+
+        }
+      } // End Skills
+
+      //Work with
+      #workWith{
+        margin: 1em 0 0 0;
+
+      } // End Work with
+
+        //LANGUAGES
+        #languages{
+          margin: 1em 0 0 0;
+
+          .box{
+            font-family: $font-light;
+
+            .bar{
+              background: $forest;
+              color: #fff;
+              display: block;
+              padding:0.25em;
+              width: 0%;
+              height: 1em;
+
+              &.ger{ animation: ger 5s; width: 100%;}
+              &.eng{ animation: eng 5s; width: 75%;}
+              &.fr{ animation: fr 5s; width: 30%;}
+
+              @keyframes ger {
+                  from {width: 0%;}
+                  to {width: 100%;}
+              }
+              @keyframes eng {
+                  from {width: 0%;}
+                  to {width: 75%;}
+              }
+              @keyframes fr {
+                  from {width: 0%;}
+                  to {width: 30%;}
+              }
+          }
+        }
+      } // End LANGUAGES
+
+      #contact{
+        p{
+          font-family: $font-light;
+          color: $grey;
+
+          a{ color: $cactus;
+              &:hover{
+                color: $forest;
+                text-decoration: none;
+              }
+           }
+        }
+      }
+
+    } // End Container
+
+      .circle{
+        height: 10em;
+        width: 10em;
+        margin: 0 auto;
+
+        border:0.25em solid $pearl;
+        border-radius: 100%;
+        background: #fff;
+
+        position: relative;
+        top: -16em;
+      }
+
+  } // End Section
+} // End Wrapper
+
+
+.sidenav{
+    height: 100%;
+    width: 2.2em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:$forest;
+    color: $pearl;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    i{
+      font-size: 1.8em;
+      transition: display .5s;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover{
+        color: $grey;
+      }
+    }
+
+    a{
+        padding: 8px 8px 8px 40px;
+        text-decoration: none;
+        font-size: 25px;
+        color: $pearl;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+            color: $peach;
+        }
+
+        p{ font-size: 0.69em; }
+    }
+
+    .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 320px) {
+  #wrapper{
+    section{
+      .circle{
+        height: 8em;
+        width: 8em;
+        top: -12em;
       }
     }
   }
+}
 
-  .circle{
-    height: 10em;
-    width: 10em;
-    margin: 0 auto;
+@media screen and (max-width: 480px) {
+  #wrapper{
+    section{
+      width: 100%;
+      &#header{
+        .row{
+          padding-top:2em;
+        }
+      }
+      &#container{
+        width:100%;
 
-    border:0.25em solid $pearl;
-    border-radius: 100%;
-    background: #fff;
+        #experienceTable,
+        #educationTable{
+          width:100%;
+        }
 
-    position: relative;
-    top: 1em;
+      }
+
+      .circle{
+        height: 6em;
+        width: 6em;
+        top: -14em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #wrapper{
+    section{
+
+      &#container{
+
+        #experienceTable,
+        #educationTable{
+          width:100%;
+        }
+
+      }
+
+    }
   }
 }
