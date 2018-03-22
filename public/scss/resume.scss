@@ -1,0 +1,153 @@
+/* Global Fonts
+================================================== */
+$font: 'Open Sans Condensed', sans-serif;
+$font-extra: 'Abril Fatface', cursive;
+
+/* Global Colors
+================================================== */
+$white : #fff;
+$black : #000;
+
+$light-grey : #e9ecef;
+$norm-grey  : rgba(86, 61, 124, .2);
+$dark-grey  : #343a40;
+
+$primary-color: rgb(48, 48, 48);
+$secondary-color: rgb(189, 96, 124);
+
+/*borders*/
+$border: 1px solid rgba(86, 61, 124, .2);
+
+@mixin gradient($primary-color, $primary-color) {
+  background: $primary-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $primary-color1 1%, $primary-color 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $primary-color 1%,$primary-color 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $primary-color 1%,$primary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+/* Setup
+================================================== */
+body, html{
+  min-width: 320px;
+}
+
+h1{
+  font-family: $font;
+  font-size: 4em;
+  color: $primary-color;
+}
+
+/* Wrapper - Container
+================================================== */
+#wrapper{
+  background: $white;
+  min-height: 100%;
+  font-family: $font;
+  font-weight: 300;
+  color: $primary-color;
+
+  section{
+    width: 80%;
+    margin:0 auto;
+
+    &#header{
+      text-align: right;
+      padding: 1em 0 1em 0;
+
+      h1{
+        font-family: $font;
+        font-weight: 700;
+        font-size: 8em;
+        color: $primary-color;
+        line-height: 0.75em;
+      }
+
+      p{
+        margin: 0.5em 0;
+      }
+    }
+
+    &#container{
+      h2{
+        font-family: $font;
+        font-weight: 700;
+      }
+
+      //experience
+      .date{
+        color: $secondary-color;
+        font-size: 1.2em;
+      }
+
+      .work{
+        color: $primary-color;
+        font-size: 1.4em;
+      }
+
+      .city{
+        color: $secondary-color;
+        font-size: 0.59em;
+        margin: 0 0 1em 0;
+
+        i{
+          font-size: 0.5em;
+          margin:0 0.5em 0 0;
+        }
+      }
+
+
+      //skills
+      .bar{
+        width: 100%;
+        background: $norm-grey;
+        margin:0 0 0.5em 0;
+
+        .skill{
+          background: $secondary-color;
+          color: $white;
+          padding: 0 0 0 0.5em;
+
+          &.html{ width:100%;}
+          &.css{ width:100%;}
+          &.sass{ width:90%;}
+          &.js{ width:80%;}
+
+        }
+      }
+
+      //compentences
+      .compentences{
+        margin: 1em 0;
+
+        i{
+          font-size: 1.8em;
+          color: $primary-color;
+          margin:0 0.5em 0 0;
+        }
+      }
+
+      //Languages
+      .circle{
+        width: 6em;
+        height: 6em;
+        float: left;
+        border: 6px solid $secondary-color;
+        border-radius: 100%;
+        padding: 1em;
+        margin: 0 0.5em 0 0;
+        line-height: 3em;
+        text-align: center;
+        color: $secondary-color;
+      }
+    }
+
+
+  } // End Section
+} // End Wrapper
+
+
+header{
+  //@include gradient($primary-color, $primary-color)
+
+}

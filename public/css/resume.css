@@ -1,0 +1,86 @@
+/* Global Fonts
+================================================== */
+/* Global Colors
+================================================== */
+/*borders*/
+/* Setup
+================================================== */
+body, html {
+  min-width: 320px; }
+
+h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 4em;
+  color: #303030; }
+
+/* Wrapper - Container
+================================================== */
+#wrapper {
+  background: #fff;
+  min-height: 100%;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  color: #303030; }
+  #wrapper section {
+    width: 80%;
+    margin: 0 auto; }
+    #wrapper section#header {
+      text-align: right;
+      padding: 1em 0 1em 0; }
+      #wrapper section#header h1 {
+        font-family: "Open Sans Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 8em;
+        color: #303030;
+        line-height: 0.75em; }
+      #wrapper section#header p {
+        margin: 0.5em 0; }
+    #wrapper section#container h2 {
+      font-family: "Open Sans Condensed", sans-serif;
+      font-weight: 700; }
+    #wrapper section#container .date {
+      color: #bd607c;
+      font-size: 1.2em; }
+    #wrapper section#container .work {
+      color: #303030;
+      font-size: 1.4em; }
+    #wrapper section#container .city {
+      color: #bd607c;
+      font-size: 0.59em;
+      margin: 0 0 1em 0; }
+      #wrapper section#container .city i {
+        font-size: 0.5em;
+        margin: 0 0.5em 0 0; }
+    #wrapper section#container .bar {
+      width: 100%;
+      background: rgba(86, 61, 124, 0.2);
+      margin: 0 0 0.5em 0; }
+      #wrapper section#container .bar .skill {
+        background: #bd607c;
+        color: #fff;
+        padding: 0 0 0 0.5em; }
+        #wrapper section#container .bar .skill.html {
+          width: 100%; }
+        #wrapper section#container .bar .skill.css {
+          width: 100%; }
+        #wrapper section#container .bar .skill.sass {
+          width: 90%; }
+        #wrapper section#container .bar .skill.js {
+          width: 80%; }
+    #wrapper section#container .compentences {
+      margin: 1em 0; }
+      #wrapper section#container .compentences i {
+        font-size: 1.8em;
+        color: #303030;
+        margin: 0 0.5em 0 0; }
+    #wrapper section#container .circle {
+      width: 6em;
+      height: 6em;
+      float: left;
+      border: 6px solid #bd607c;
+      border-radius: 100%;
+      padding: 1em;
+      margin: 0 0.5em 0 0;
+      line-height: 3em;
+      text-align: center;
+      color: #bd607c; }

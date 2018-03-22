@@ -19,8 +19,16 @@ $grey   : rgb(198, 199, 199);
 $peach  : rgb(244, 212, 202);
 $pearl  : rgb(251, 237, 230);
 
+
 /*borders*/
 $border: 1px solid rgba(86, 61, 124, .2);
+
+@mixin gradient($cactus, $forest) {
+  background: $cactus; /* Old browsers */
+  background: -moz-linear-gradient(top, $cactus 1%, $forest 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $cactus 1%,$forest 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $cactus 1%,$forest 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 
 /* Setup
@@ -31,13 +39,11 @@ body, html{
 
 a{ color: $cactus;}
 
-
 /* Wrapper - Sidebar - Container
 ================================================== */
 #wrapper{
   min-height: 100%;
-  padding-top: 6em;
-  padding-left: 2.2em;
+  padding: 6em 0 1em 0;
   background: $pearl;
 
   -webkit-transition: all 0.5s ease;
@@ -55,6 +61,7 @@ a{ color: $cactus;}
     color: $cactus;
 
     &#header{
+      position: relative;
       height: 20vh;
 
       background: #fff;
@@ -76,16 +83,35 @@ a{ color: $cactus;}
           color: $forest;
         }
       }
+
+      .print{
+        position: absolute;
+        top: 0.25em;
+        right: 0;
+
+        i{
+          color: $cactus;
+          background: #fff;
+          padding: 0.5em;
+          margin: 0.25em 1em 0 0;
+          font-size: 1.2em;
+          width:2em;
+
+          &:hover{
+            color: $forest;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     &#container{
       padding: 20px;
       width: 70vw;
       height: auto;
-      margin-top: 1em;
+      margin: 1em auto;
 
       .row{
-        margin:0.5em 0 0 0;
 
         [class*="col-"]{
 
@@ -102,42 +128,84 @@ a{ color: $cactus;}
         }
       }
 
-      #educationTable{
-        position: relative;
-        font-family: $font-light;
-        color: $forest;
-
-        tr{
-          margin:0 0 0.5em 0;
-          border-bottom: 1em solid #fff;
-
-          td{
-            font-weight:bold;
-
-            &:nth-child(2n){
-              background: $pearl;
-              padding: 1em 1em;
-              font-weight: normal;
-              display: block;
-              margin-left: 3em;
-            }
-          }
-        }
-
-        &:before{
-          content:"";
-          position: absolute;
-          left: 3em;
-          display:block;
-          width: 0.25em;
-          height: 100%;
-          background: $cactus;
+      #introduction{
+        p{
+          margin:0 0 1em 0;
+          font-family: $font-light;
         }
       }
 
+      #education{
+
+        #educationList{
+          position: relative;
+          font-family: $font-light;
+          font-size: 0.69em;
+          padding: 0;
+
+          li {
+              width: 100%;
+              z-index: 2;
+              position: relative;
+              float: left;
+              list-style: none;
+          }
+
+          &:before{
+              width: 5px;
+              height: 108%;
+              position: absolute;
+              left: 25px;
+              top: -4px;
+              content: ' ';
+              display: block;
+              background: $cactus;
+              background: -moz-linear-gradient(top, #ffffff 0%, $cactus 7%, $cactus 89%, #ffffff 100%);
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,$cactus), color-stop(89%,$cactus), color-stop(100%,#ffffff));
+              background: -webkit-linear-gradient(top, #ffffff 0%,$cactus 7%,$cactus 89%,#ffffff 100%);
+              background: -o-linear-gradient(top, #ffffff 0%,$cactus 7%,$cactus 89%,#ffffff 100%);
+              background: -ms-linear-gradient(top, #ffffff 0%,$cactus 7%,$cactus 89%,#ffffff 100%);
+              background: linear-gradient(to bottom, #ffffff 0%,$cactus 7%,$cactus 89%,#ffffff 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+          }
+
+          .year {
+              width: 10%;
+              background: #fff;
+              padding: 10px;
+              font-size: 1.5em;
+              font-weight: 700;
+              display: inline-block;
+          }
+
+          .description {
+            width: 80%;
+            display: inline-block;
+            background: $pearl;
+            margin-bottom: 10px;
+            position: relative;
+            padding: 10px 10px 0 10px;
+            border-bottom: 1px solid $light-grey;
+
+              h3 {
+                font-size: 1.6em;
+                margin: 0;
+                padding: 0;
+                font-weight: 700;
+              }
+
+             p {
+                font-size: 1.3em;
+                margin: 0.15em 0;
+                padding: 0;
+            }
+        }
+      }
+    }
+
       #experienceTable{
         font-family: $font-light;
-        width: 80%;
+        width: 90%;
 
         tr{
           border-bottom: 1em solid #fff;
@@ -157,11 +225,29 @@ a{ color: $cactus;}
               }
             }
 
+            i{
+              float: left;
+              height: 2em;
+              width: 3.5em;
+              text-align: center;
+              padding: 0.5em 0.5em 0 0;
+              color: $cactus;
+            }
+
             &:nth-of-type(2n){
               width: 60%;
-              background: $grey;
+              background: $cactus;
               padding: 0.5em 1em;
               border-right: 0em;
+
+              span{
+                color: $pearl;
+
+                i{
+                  font-size: 0.76em;
+                  color: $peach;
+                }
+              }
             }
           }
         }
@@ -172,6 +258,7 @@ a{ color: $cactus;}
         margin: 1em 0 0 0;
 
         .row{
+          margin:0 0 0.5em 0;
 
           i{
             color: $forest;
@@ -223,16 +310,46 @@ a{ color: $cactus;}
       } // End LANGUAGES
 
       #contact{
+        .row{
+          margin:0 0 0.5em 0;
+          div{
+            font-family: $font-light;
+
+            i{
+              margin:0 0.5em 0 0;
+              min-width: 3em;
+              padding:0.5em;
+              text-align: center;
+              background: $pearl;
+            }
+
+            a{ color: $cactus;
+                &:hover{
+                  color: $forest;
+                  text-decoration: none;
+                }
+            }
+          }
+        }
+
         p{
           font-family: $font-light;
-          color: $grey;
+          margin:0 0 0.25em 0;
+
+          i{
+            margin:0 0.5em 0 0;
+            min-width: 3em;
+            padding:0.5em;
+            text-align: center;
+            background: $pearl;
+          }
 
           a{ color: $cactus;
               &:hover{
                 color: $forest;
                 text-decoration: none;
               }
-           }
+          }
         }
       }
 
@@ -246,6 +363,8 @@ a{ color: $cactus;}
         border:0.25em solid $pearl;
         border-radius: 100%;
         background: #fff;
+        background-image: url("/img/example.jpg");
+        background-size: contain;
 
         position: relative;
         top: -16em;
@@ -254,121 +373,62 @@ a{ color: $cactus;}
   } // End Section
 } // End Wrapper
 
+header{
+  @include gradient($cactus, $forest)
+  font-family: $font-light;
 
-.sidenav{
-    height: 100%;
-    width: 2.2em;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:$forest;
-    color: $pearl;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  h4{
+    font-family: $font-bold;
+  }
 
-    i{
-      font-size: 1.8em;
-      transition: display .5s;
-      width: 100%;
-      text-align: center;
-      cursor: pointer;
+  #navbarHeader{
+    .container{
+      .row{
+        #headerNav{
+          ul{
+            list-style: none;
+            padding: 0;
+            font-family: $font-bold;
+            font-size: 1em;
 
-      &:hover{
-        color: $grey;
-      }
-    }
+            color: $pearl;
 
-    a{
-        padding: 8px 8px 8px 40px;
-        text-decoration: none;
-        font-size: 25px;
-        color: $pearl;
-        display: block;
-        transition: 0.3s;
+            li{
+              margin:0 0 0.5em 0;
 
-        &:hover {
-            color: $peach;
+              &:hover{
+                color: $peach;
+                cursor: pointer;
+              }
+              i{
+                margin:0 0.5em 0 0;
+              }
+            }
+          }
         }
+        #headerContact{
+          ul{
+            list-style-type: none;
+            li{
+              a{
+                color: $pearl;
 
-        p{ font-size: 0.69em; }
-    }
+                &:hover{
+                  text-decoration: none;
+                  color: $peach;
 
-    .closebtn{
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-}
-
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-@media screen and (max-width: 320px) {
-  #wrapper{
-    section{
-      .circle{
-        height: 8em;
-        width: 8em;
-        top: -12em;
+                }
+                i{
+                  margin:0 0.5em 0 0;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-}
 
-@media screen and (max-width: 480px) {
-  #wrapper{
-    section{
-      width: 100%;
-      &#header{
-        .row{
-          padding-top:2em;
-        }
-      }
-      &#container{
-        width:100%;
-
-        #experienceTable,
-        #educationTable{
-          width:100%;
-        }
-
-      }
-
-      .circle{
-        height: 6em;
-        width: 6em;
-        top: -14em;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  #wrapper{
-    section{
-
-      &#container{
-
-        #experienceTable,
-        #educationTable{
-          width:100%;
-        }
-
-      }
-
-    }
+  .navbar{
   }
 }

@@ -1,13 +1,14 @@
 <html>
    <head>
-     <title>CULT</title>
+     <title>Resume Maria Ambroselli</title>
      <meta charset="UTF-8">
-     <meta name="description" content="Cult">
-     <meta name="keywords" content="Cult">
-     <meta name="author" content="MRY">
+     <meta name="description" content="Resume Maria Ambroselli">
+     <meta name="keywords" content="Resume Freontend Developer Media Designer">
+     <meta name="author" content="Maria Ambroselli">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- own style -->
      <link rel="stylesheet" href="/css/index.css">
+     <link rel="stylesheet" href="/css/breakpoints.css">
      <!-- bootstrap style -->
      <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
      <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap-grid.css">
@@ -18,6 +19,41 @@
    </head>
    <body>
 
+     <header>
+       <div class="collapse" id="navbarHeader" style="">
+         <div class="container">
+           <div class="row">
+             <div class="col-sm-8 col-md-7 py-4" id="headerNav">
+               <h4 class="text-white">Projects</h4>
+               <ul>
+                 <li><i class="fas fa-long-arrow-alt-right"></i>FrontEnte</li>
+                 <li><i class="fas fa-long-arrow-alt-right"></i>{CATcode}</li>
+               </ul>
+             </div>
+             <div class="col-sm-4 offset-md-1 py-4" id="headerContact">
+               <h4 class="text-white">Contact</h4>
+               <ul class="list-unstyled">
+                 <li><a href="mailto:mail@maria-ambroselli.de"><i class="fas fa-at"></i>mail@maria-ambroselli.de</a></li>
+                 <li><a href="#"><i class="fab fa-github"></i>/maryquery</a></li>
+                 <li><a href="#"><i class="fab fa-xing"></i>/mambroselli</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="navbar navbar-dark box-shadow">
+         <div class="container d-flex justify-content-between">
+           <a href="#" class="navbar-brand d-flex align-items-center">
+             <i class="fas fa-sun fa-spin"></i>
+             <strong>Resume</strong>
+           </a>
+           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+         </div>
+       </div>
+     </header>
+
      <!-- wrapper start-->
      <main role="main" id="wrapper">
 
@@ -27,6 +63,10 @@
            <h4>Media Designer & Frontend Developer</h4>
          </div>
          <div class="circle"></div>
+         <!-- print start-->
+         <div class="print">
+           <i class="fas fa-cloud-download-alt"></i>
+         </div><!-- print end-->
       </section>
 
       <section role="container" id="container">
@@ -35,36 +75,50 @@
 
               <div class="col-lg-7">
 
-                <!-- About -->
-                <div>
-                   <h5>About me</h5>
-                   <span>
-                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                   duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                 </span>
+                <!-- Introduction -->
+                <div id="introduction">
+                   <h5>Introduction</h5>
+                   <p>
+                     I'm Maria Ambroselli a Creative Frontend Developer with 3+ years of professional experience,
+                     currently living and working in Magdeburg.</br>
+                     In the last few years I worked and collaborated with agencies such as Urban Studio,
+                     Martabak, Siomay & many more.
+                  </p>
                </div>
 
                <!-- Education -->
                <div id="education">
                   <h5>Education</h5>
-                  <table id="educationTable">
-                    <tr>
-                      <td>1998</td>
-                      <td>Diensterweg Grundschule Wolmirstedt</td>
-                    </tr>
-                    <tr>
-                      <td>2003</td>
-                      <td>Leibniz Sekundarschule Wolmirstedt</td>
-                    </tr>
-                    <tr>
-                      <td>2009</td>
-                      <td>BbS1 "Eike von Repgow" Magdeburg</td>
-                    </tr>
-                    <tr>
-                      <td>2012</td>
-                      <td>Ausbildung Mediengestalter Digital-/Printmedien</td>
-                    </tr>
-                  </table>
+                  <ul id="educationList" class="clearfix">
+                    <li>
+                      <div class="year pull-left">1998</div>
+                      <div class="description pull-right">
+                        <h3>Diensterweg Grundschule</h3>
+                        <p>Wolmirstedt</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="year pull-left">2003</div>
+                      <div class="description pull-right">
+                        <h3>Leibniz Sekundarschule </h3>
+                        <p>Wolmirstedt</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="year pull-left">2009</div>
+                      <div class="description pull-right">
+                        <h3>BbS1 "Eike von Repgow"</h3>
+                        <p>Magdeburg</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="year pull-left">2012</div>
+                      <div class="description pull-right">
+                        <h3>Ausbildung Mediengestalter Digital-/Printmedien</h3>
+                        <p>Conix GmbH in Hannover</p>
+                      </div>
+                    </li>
+                  </ul>
               </div>
 
               <!-- Experience -->
@@ -73,22 +127,24 @@
                  <table id="experienceTable">
                    <tr>
                      <td>
+                       <i class="fas fa-paint-brush"></i>
                        <span>Conix GmbH</span>
                        <span>2014 - 2015</span>
                      </td>
                      <td>
                        <span>Mediengestalter Digital</span>
-                       <span>Stadt Hannover</span>
+                       <span><i class="fas fa-location-arrow"></i> Hannover</span>
                      </td>
                    </tr>
                    <tr>
                      <td>
+                       <i class="fas fa-code"></i>
                        <span>Invia Travel Germany</span>
                        <span>2015 - bis jetzt</span>
                      </td>
                      <td>
                        <span>Frontend Developer</span>
-                       <span>Stadt Magdeburg</span>
+                       <span><i class="fas fa-location-arrow"></i> Magdeburg</span>
                      </td>
                    </tr>
                  </table>
@@ -101,26 +157,10 @@
 
                <!-- Contact -->
                <div id="contact">
-                 <h5>Contact</h5>
-                   <p>
-                     <a href="mailto:mail@maria-ambroselli.de">
-                       <i class="far fa-envelope"></i>
-                       mail@maria-ambroselli.de
-                     </a>
-                   </p>
-                   <p>
-                     <a href="mailto:mail@maria-ambroselli.de">
-                       <i class="fab fa-github"></i>
-                       /maryquery
-                     </a>
-                   </p>
-                   <p>
-                     <a href="mailto:mail@maria-ambroselli.de">
-                       <i class="fab fa-xing"></i>
-                       /mariaambroselli
-                     </a>
-                   </p>
-
+                 <h5>Personal Info</h5>
+                   <p class=""><i class="fas fa-venus"></i>female</p>
+                   <p class=""><i class="fas fa-birthday-cake"></i>04.05.1992</p>
+                   <p class=""><i class="fas fa-language"></i>german</p>
                </div>
 
             <!-- Skills -->
@@ -149,7 +189,7 @@
             <!-- Work with-->
             <div id="workWith">
               <h5>Work with</h5>
-              <span>Atom - Netbeans - Photoshop - Illustrator - InDesign - 
+              <span>Atom - Netbeans - Photoshop - Illustrator - InDesign -
                     Agile - Scrum/ Kanban - Jira
               </span>
             </div>
@@ -159,17 +199,17 @@
               <h5>LANGUAGES</h5>
                 <!-- Deutsch-->
                 <div class="box">
-                  Deutsch
+                  German
                   <span class="bar ger"></span>
                 </div>
                 <!-- Englisch-->
                 <div class="box">
-                  Englisch
+                  English
                   <span class="bar eng"></span>
                 </div>
                 <!-- Französisch-->
                 <div class="box">
-                  Französisch
+                  French
                   <span class="bar fr"></span>
                 </div>
             </div>
@@ -178,17 +218,6 @@
 
        </section>
      </main> <!-- wrapper end   <i class="fas fa-bars"></i>-->
-
-    <!-- menu start-->
-    <div id="mySidenav" class="sidenav">
-      <i href="javascript:void(0)" class="fas fa-bars" id="iconNav" onclick="openNav()"></i>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">About</a>
-      <a href="#">Front-Ente <p>[Blog]</p></a>
-      <a href="#">{CatCode}</a>
-      <a href="#">Contact</a>
-    </div><!-- menu end-->
-
 
     <!-- js -->
     <script

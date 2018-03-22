@@ -1,0 +1,45 @@
+// MEDIA BREAKPOINTS -down
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  #wrapper{
+    section{
+        width: 80%;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  #wrapper{
+    section{
+        width: 75%;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  #wrapper{
+    section{
+
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  #wrapper{
+    section{
+
+    }
+    }
+  }
+}
+
+// Extra Extra small devices (portrait phones, less than 320px)
+@media (max-width: 320px) {
+  #wrapper{
+    section{
+    }
+  }
+}

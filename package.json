@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch public/scss -o public/css",
-    "serve": "http-server -p 5000",
-    "start": "node-sass --watch public/scss -o public/css | http-server -p 5000"
+    "serve": "http-server -a localhost -p 5000 -c-1",
+    "start": "node-sass --watch public/scss -o public/css | http-server -a localhost -p 5000 -c-1"
   },
   "repository": {
     "type": "git",
