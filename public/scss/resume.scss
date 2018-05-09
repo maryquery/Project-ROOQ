@@ -90,6 +90,7 @@ h1{
         font-size: 0.59em;
         margin: 0 0 1em 0;
 
+
         i{
           font-size: 0.5em;
           margin:0 0.5em 0 0;
@@ -139,6 +140,10 @@ h1{
         line-height: 3em;
         text-align: center;
         color: $secondary-color;
+
+        .inner{
+          
+        }
       }
     }
 
