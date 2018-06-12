@@ -13,6 +13,47 @@ h1 {
   font-size: 4em;
   color: #303030; }
 
+/* HEADER
+================================================== */
+header {
+  position: fixed;
+  width: 50%;
+  height: auto;
+  padding: 1em;
+  background: #bd607c;
+  color: #fff; }
+  header span {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 1.4em; }
+  header i {
+    float: right;
+    cursor: pointer; }
+    header i:hover {
+      color: #e9ecef; }
+  header #navContent.open {
+    display: block;
+    visibility: visible;
+    height: 10em;
+    animation: open 2s; }
+
+@keyframes open {
+  from {
+    height: 0; }
+  to {
+    height: 10em; } }
+  header #navContent.close {
+    display: none;
+    visibility: hidden;
+    height: 2em;
+    animation: close 2s; }
+
+@keyframes close {
+  from {
+    height: 10em; }
+  to {
+    height: 0; } }
+
 /* Wrapper - Container
 ================================================== */
 #wrapper {
@@ -22,7 +63,7 @@ h1 {
   font-weight: 300;
   color: #303030; }
   #wrapper section {
-    width: 80%;
+    width: 75%;
     margin: 0 auto; }
     #wrapper section#header {
       text-align: right;
@@ -38,19 +79,38 @@ h1 {
     #wrapper section#container h2 {
       font-family: "Open Sans Condensed", sans-serif;
       font-weight: 700; }
-    #wrapper section#container .date {
-      color: #bd607c;
-      font-size: 1.2em; }
-    #wrapper section#container .work {
-      color: #303030;
-      font-size: 1.4em; }
-    #wrapper section#container .city {
-      color: #bd607c;
-      font-size: 0.59em;
-      margin: 0 0 1em 0; }
-      #wrapper section#container .city i {
-        font-size: 0.5em;
-        margin: 0 0.5em 0 0; }
+    #wrapper section#container #experience:before {
+      content: "";
+      width: 0.25em;
+      height: 80%;
+      position: absolute;
+      left: 0;
+      top: 2em;
+      background: rgba(86, 61, 124, 0.2); }
+    #wrapper section#container #experience .row {
+      position: relative; }
+      #wrapper section#container #experience .row:before {
+        content: "";
+        width: 0.5em;
+        height: 0.5em;
+        position: absolute;
+        left: -2px;
+        top: 12px;
+        background: #bd607c;
+        border-radius: 100%; }
+      #wrapper section#container #experience .row .date {
+        color: #bd607c;
+        font-size: 1.2em; }
+      #wrapper section#container #experience .row .work {
+        color: #303030;
+        font-size: 1.4em; }
+      #wrapper section#container #experience .row .city {
+        color: #bd607c;
+        font-size: 0.59em;
+        margin: 0 0 1em 0; }
+        #wrapper section#container #experience .row .city i {
+          font-size: 0.5em;
+          margin: 0 0.5em 0 0; }
     #wrapper section#container .bar {
       width: 100%;
       background: rgba(86, 61, 124, 0.2);
@@ -84,3 +144,10 @@ h1 {
       line-height: 3em;
       text-align: center;
       color: #bd607c; }
+    #wrapper section#container #interests div i {
+      width: auto;
+      height: auto;
+      background: #e9ecef;
+      padding: 0.5em;
+      font-size: 2.4em;
+      color: #303030; }

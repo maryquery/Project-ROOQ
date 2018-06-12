@@ -25,7 +25,6 @@ $border: 1px solid rgba(86, 61, 124, .2);
   background: linear-gradient(to bottom, $primary-color 1%,$primary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-
 /* Setup
 ================================================== */
 body, html{
@@ -38,6 +37,59 @@ h1{
   color: $primary-color;
 }
 
+/* HEADER
+================================================== */
+header{
+  position: fixed;
+  width: 50%;
+  height: auto;
+  padding: 1em;
+  background: $secondary-color;
+  color: $white;
+
+    span{
+      font-family: $font;
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+
+    i{
+      float: right;
+      cursor: pointer;
+
+      &:hover{
+        color: $light-grey;
+      }
+    }
+
+    #navContent{
+
+      &.open{
+        display: block;
+        visibility: visible;
+        height: 10em;
+        animation: open 2s;
+      }
+
+      @keyframes open {
+          from {height: 0;}
+          to {height: 10em;}
+      }
+
+      &.close{
+        display: none;
+        visibility: hidden;
+        height: 2em;
+        animation: close 2s;
+      }
+
+      @keyframes close {
+          from {height: 10em;}
+          to {height: 0;}
+      }
+    }
+}
+
 /* Wrapper - Container
 ================================================== */
 #wrapper{
@@ -48,7 +100,7 @@ h1{
   color: $primary-color;
 
   section{
-    width: 80%;
+    width: 75%;
     margin:0 auto;
 
     &#header{
@@ -75,25 +127,54 @@ h1{
       }
 
       //experience
-      .date{
-        color: $secondary-color;
-        font-size: 1.2em;
-      }
+      #experience{
 
-      .work{
-        color: $primary-color;
-        font-size: 1.4em;
-      }
+        &:before{
+          content:"";
+          width: 0.25em;
+          height: 80%;
+          position: absolute;
+          left: 0;
+          top: 2em;
+          background: $norm-grey;
 
-      .city{
-        color: $secondary-color;
-        font-size: 0.59em;
-        margin: 0 0 1em 0;
+        }
+
+        .row{
+          position: relative;
+
+          &:before{
+            content:"";
+            width: 0.5em;
+            height: 0.5em;
+            position: absolute;
+            left: -2px;
+            top: 12px;
+            background: $secondary-color;
+            border-radius: 100%;
+          }
+
+          .date{
+            color: $secondary-color;
+            font-size: 1.2em;
+          }
+
+          .work{
+            color: $primary-color;
+            font-size: 1.4em;
+          }
+
+          .city{
+            color: $secondary-color;
+            font-size: 0.59em;
+            margin: 0 0 1em 0;
 
 
-        i{
-          font-size: 0.5em;
-          margin:0 0.5em 0 0;
+            i{
+              font-size: 0.5em;
+              margin:0 0.5em 0 0;
+            }
+          }
         }
       }
 
@@ -142,7 +223,22 @@ h1{
         color: $secondary-color;
 
         .inner{
-          
+
+        }
+      }
+
+      //Interests
+      #interests{
+        div{
+
+          i{
+            width: auto;
+            height: auto;
+            background: $light-grey;
+            padding: 0.5em;
+            font-size: 2.4em;
+            color: $primary-color;
+          }
         }
       }
     }

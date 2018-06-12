@@ -2,6 +2,10 @@ console.log('ready');
 
 $(document).ready(function() {
 
+  $('.fa-sort-down').click(function() {
+    $(this).toggleClass('fa-sort-up fa-sort-down ');
+    $('#navContent').toggleClass('open close');
+  });
 
 });
 
