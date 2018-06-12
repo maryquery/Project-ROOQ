@@ -63,29 +63,30 @@ header{
     }
 
     #navContent{
+      height: auto;
 
-      &.open{
-        display: block;
-        visibility: visible;
-        height: 10em;
-        animation: open 2s;
-      }
+        &.open{
+          display: block;
+          visibility: visible;
+          height: 10em;
+          animation: open 2s;
 
-      @keyframes open {
-          from {height: 0;}
-          to {height: 10em;}
-      }
+          @keyframes open {
+              from {height: 0em;}
+              to {height: 10em;}
+          }
+        }
 
-      &.close{
-        display: none;
-        visibility: hidden;
-        height: 2em;
-        animation: close 2s;
-      }
+        &.close{
+          display: none;
+          visibility: hidden;
+          height: 2em;
+          animation: close 2s;
 
-      @keyframes close {
-          from {height: 10em;}
-          to {height: 0;}
+          @keyframes close {
+              from {height: 10em;}
+              to {height: 2em;}
+          }
       }
     }
 }

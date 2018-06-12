@@ -31,28 +31,30 @@ header {
     cursor: pointer; }
     header i:hover {
       color: #e9ecef; }
-  header #navContent.open {
-    display: block;
-    visibility: visible;
-    height: 10em;
-    animation: open 2s; }
+  header #navContent {
+    height: auto; }
+    header #navContent.open {
+      display: block;
+      visibility: visible;
+      height: 10em;
+      animation: open 2s; }
 
 @keyframes open {
   from {
-    height: 0; }
+    height: 0em; }
   to {
     height: 10em; } }
-  header #navContent.close {
-    display: none;
-    visibility: hidden;
-    height: 2em;
-    animation: close 2s; }
+    header #navContent.close {
+      display: none;
+      visibility: hidden;
+      height: 2em;
+      animation: close 2s; }
 
 @keyframes close {
   from {
     height: 10em; }
   to {
-    height: 0; } }
+    height: 2em; } }
 
 /* Wrapper - Container
 ================================================== */
