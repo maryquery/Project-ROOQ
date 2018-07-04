@@ -2,9 +2,14 @@ console.log('ready');
 
 $(document).ready(function() {
 
-  $('.fa-sort-down').click(function() {
-    $(this).toggleClass('fa-sort-up fa-sort-down ');
-    $('#navContent').toggleClass('open close');
+  //$('.fa-sort-down').click(function() {
+    //$(this).toggleClass('fa-sort-up fa-sort-down');
+    //$('#navContent').toggleClass('open close');
+  //});
+
+  $( "header" ).click(function() {
+    $( "#navContent" ).toggle("slow");
+    $(".arrow").toggleClass('fa-sort-up fa-sort-down');
   });
 
 });
