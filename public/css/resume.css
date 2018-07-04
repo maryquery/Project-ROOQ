@@ -18,7 +18,8 @@ body, html {
 
 body {
   font-size: 100%;
-  font-size: 1em; }
+  font-size: 1em;
+  background: #F6F2EE; }
   @media (max-width: 960px) {
     body {
       padding-top: 4em; } }
@@ -26,7 +27,7 @@ body {
 h1 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 4em;
-  color: #303030; }
+  color: #000027; }
   @media (max-width: 960px) {
     h1 {
       font-size: 50%; } }
@@ -38,8 +39,8 @@ header {
   top: 0;
   width: 50%;
   height: auto;
-  padding: 1em;
-  background: #bd607c;
+  padding: 1em 1em 1em 3em;
+  background: #A0797C;
   color: #fff; }
   @media screen and (max-width: 960px) {
     header {
@@ -51,13 +52,18 @@ header {
   header i.arrow {
     position: absolute;
     right: 1em;
-    bottom: 2em;
+    bottom: 1.5em;
     cursor: pointer; }
     header i.arrow:hover {
       color: #e9ecef; }
   header #navContent {
     height: 12em;
     display: none; }
+    header #navContent .navBox {
+      height: 4em;
+      width: 4em;
+      border-bottom: 1px solid #000027;
+      color: #fff; }
 
 /* Wrapper - Container
 ================================================== */
@@ -66,13 +72,13 @@ header {
   min-height: 100%;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 300;
-  color: #303030; }
+  color: #000027; }
   #wrapper section {
     width: 75%;
     margin: 0 auto; }
     @media (max-width: 960px) {
       #wrapper section {
-        width: 90%; } }
+        width: 80%; } }
     #wrapper section#header {
       text-align: right;
       padding: 1em 0 1em 0; }
@@ -80,7 +86,7 @@ header {
         font-family: "Open Sans Condensed", sans-serif;
         font-weight: 700;
         font-size: 8em;
-        color: #303030;
+        color: #000027;
         line-height: 0.75em; }
         @media (max-width: 960px) {
           #wrapper section#header h1 {
@@ -89,18 +95,23 @@ header {
           #wrapper section#header h1 {
             font-size: 3em; } }
       #wrapper section#header p {
-        margin: 0.5em 0; }
+        margin: 1em 0; }
+        #wrapper section#header p:nth-of-type(2) {
+          border-bottom: 0.15em solid #000027; }
+        #wrapper section#header p i {
+          color: #343a40;
+          margin: 0 0.5em; }
     #wrapper section#container h2 {
       font-family: "Open Sans Condensed", sans-serif;
       font-weight: 700; }
     #wrapper section#container #experience:before {
       content: "";
       width: 0.25em;
-      height: 80%;
+      height: 100%;
       position: absolute;
       left: 0;
-      top: 2em;
-      background: rgba(86, 61, 124, 0.2); }
+      top: -1em;
+      background: linear-gradient(to bottom, #fff 0%, #B6A598 20%, #fff 110%); }
     #wrapper section#container #experience .row {
       position: relative; }
       #wrapper section#container #experience .row:before {
@@ -110,16 +121,16 @@ header {
         position: absolute;
         left: -2px;
         top: 12px;
-        background: #bd607c;
+        background: #7D4251;
         border-radius: 100%; }
       #wrapper section#container #experience .row .date {
-        color: #bd607c;
+        color: #7D4251;
         font-size: 1.2em; }
       #wrapper section#container #experience .row .work {
-        color: #303030;
+        color: #000027;
         font-size: 1.4em; }
       #wrapper section#container #experience .row .city {
-        color: #bd607c;
+        color: #7D4251;
         font-size: 0.59em;
         margin: 0 0 1em 0; }
         #wrapper section#container #experience .row .city i {
@@ -127,10 +138,10 @@ header {
           margin: 0 0.5em 0 0; }
     #wrapper section#container .bar {
       width: 100%;
-      background: rgba(86, 61, 124, 0.2);
+      background: #A0797C;
       margin: 0 0 0.5em 0; }
       #wrapper section#container .bar .skill {
-        background: #bd607c;
+        background: #7D4251;
         color: #fff;
         padding: 0 0 0 0.5em; }
         #wrapper section#container .bar .skill.html {
@@ -145,23 +156,24 @@ header {
       margin: 1em 0; }
       #wrapper section#container .compentences i {
         font-size: 1.8em;
-        color: #303030;
+        color: #000027;
         margin: 0 0.5em 0 0; }
     #wrapper section#container .circle {
+      position: relative;
       width: 6em;
       height: 6em;
       float: left;
-      border: 6px solid #bd607c;
+      border: 6px solid #7D4251;
       border-radius: 100%;
       padding: 1em;
       margin: 0 0.5em 0 0;
       line-height: 3em;
       text-align: center;
-      color: #bd607c; }
+      color: #7D4251; }
     #wrapper section#container #interests div i {
       width: auto;
       height: auto;
-      background: #e9ecef;
+      background: #A0797C;
       padding: 0.5em;
       font-size: 2.4em;
-      color: #303030; }
+      color: #F6F2EE; }

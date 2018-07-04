@@ -16,14 +16,21 @@ $primary-color: rgb(48, 48, 48);
 $secondary-color: rgb(189, 96, 124);
 */
 /*borders*/
+
+  $dark-blue: #000027;
+  $dark-rose: #7D4251;
+  $rose:      #A0797C;
+  $beige:     #B6A598;
+  $beige-light: #F6F2EE;
+
 $border: 1px solid rgba(86, 61, 124, .2);
 
 $light-grey : #e9ecef;
 $norm-grey  : rgba(86, 61, 124, .2);
 $dark-grey  : #343a40;
 
-$primary-color: rgb(48, 48, 48);
-$secondary-color: rgb(189, 96, 124);
+$primary-color: $dark-blue;
+$secondary-color: $dark-rose;
 
 @mixin gradient($primary-color, $primary-color) {
   background: $primary-color; /* Old browsers */
@@ -41,6 +48,7 @@ body, html{
 body{
   font-size: 100%;
   font-size: 1em;
+  background: $beige-light;
 
   @media (max-width: 960px) {
     padding-top: 4em;
@@ -64,8 +72,8 @@ header{
   top: 0;
   width: 50%;
   height: auto;
-  padding: 1em;
-  background: $secondary-color;
+  padding: 1em 1em 1em 3em;
+  background: $rose;
   color: $white;
 
     @media screen and (max-width: 960px) {
@@ -81,7 +89,7 @@ header{
     i.arrow{
       position: absolute;
       right: 1em;
-      bottom: 2em;
+      bottom: 1.5em;
       cursor: pointer;
 
       &:hover{
@@ -92,6 +100,13 @@ header{
     #navContent{
       height: 12em;
       display: none;
+
+      .navBox{
+        height: 4em;
+        width: 4em;
+        border-bottom: 1px solid $primary-color;
+        color: $white;
+      }
     }
 }
 
@@ -109,7 +124,7 @@ header{
     margin:0 auto;
 
     @media (max-width: 960px) {
-      width: 90%;
+      width: 80%;
     }
 
     &#header{
@@ -132,7 +147,16 @@ header{
       }
 
       p{
-        margin: 0.5em 0;
+        margin: 1em 0;
+
+        &:nth-of-type(2){
+          border-bottom: 0.15em solid $primary-color;
+        }
+
+        i{
+          color: $dark-grey;
+          margin:0 0.5em;
+        }
       }
     }
 
@@ -148,11 +172,11 @@ header{
         &:before{
           content:"";
           width: 0.25em;
-          height: 80%;
+          height: 100%;
           position: absolute;
           left: 0;
-          top: 2em;
-          background: $norm-grey;
+          top: -1em;
+          background: linear-gradient(to bottom, $white 0%, $beige 20%,$white 110%);
 
         }
 
@@ -198,7 +222,7 @@ header{
       //skills
       .bar{
         width: 100%;
-        background: $norm-grey;
+        background: $rose;
         margin:0 0 0.5em 0;
 
         .skill{
@@ -227,6 +251,7 @@ header{
 
       //Languages
       .circle{
+        position: relative;
         width: 6em;
         height: 6em;
         float: left;
@@ -237,10 +262,6 @@ header{
         line-height: 3em;
         text-align: center;
         color: $secondary-color;
-
-        .inner{
-
-        }
       }
 
       //Interests
@@ -250,10 +271,10 @@ header{
           i{
             width: auto;
             height: auto;
-            background: $light-grey;
+            background: $rose;
             padding: 0.5em;
             font-size: 2.4em;
-            color: $primary-color;
+            color: $beige-light;
           }
         }
       }
