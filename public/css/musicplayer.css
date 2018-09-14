@@ -1,0 +1,74 @@
+#musicPlayer {
+  width: 16em;
+  height: auto;
+  margin: 10em auto 1em auto; }
+  #musicPlayer #coverBlock {
+    position: relative; }
+    #musicPlayer #coverBlock .cover {
+      background: #999;
+      width: 100%;
+      height: 16em; }
+    #musicPlayer #coverBlock .insideCover {
+      width: 8em;
+      height: 8em;
+      background: transparent;
+      border-radius: 100%;
+      border: 3em solid #000;
+      display: inline-block;
+      position: absolute;
+      top: 26%;
+      left: 26%; }
+  #musicPlayer p {
+    margin-bottom: 0; }
+    #musicPlayer p.title {
+      font-size: 1.4em;
+      font-weight: bold; }
+    #musicPlayer p.artist {
+      margin-bottom: 1em; }
+  #musicPlayer #controls {
+    background: #fff;
+    height: auto;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center; }
+    #musicPlayer #controls button {
+      border: none;
+      background: none;
+      font-size: 1.4em;
+      margin: 0 .5em 0 .5em; }
+      #musicPlayer #controls button:hover {
+        cursor: pointer;
+        color: #545454; }
+  #musicPlayer #volumeControl {
+    height: 2em;
+    width: 100%; }
+    #musicPlayer #volumeControl #volume {
+      background: #545454;
+      height: 1px;
+      -webkit-appearance: none !important; }
+  #musicPlayer #tracker {
+    width: 100%;
+    height: 3em;
+    padding: 1em 0 1em 0; }
+    #musicPlayer #tracker #progressbar {
+      width: 80%;
+      height: 1em;
+      background: #545454;
+      float: left; }
+      #musicPlayer #tracker #progressbar #progress {
+        height: 1em;
+        width: 0;
+        background: red;
+        display: inline-block; }
+    #musicPlayer #tracker #duration {
+      float: right; }
+  #musicPlayer #playlist ul {
+    list-style-type: none;
+    padding: 0 0 0 0; }
+    #musicPlayer #playlist ul li {
+      border-bottom: 1px solid #999;
+      padding: 0.5em 0 0.5em 2em; }
+      #musicPlayer #playlist ul li.active {
+        font-weight: bold;
+        background: #ccc; }
+      #musicPlayer #playlist ul li:hover {
+        background: #ccc; }
