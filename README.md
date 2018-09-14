@@ -1,8 +1,10 @@
-# Project : ROOQ Productions
+# Project: 
+ROOQ Productions
 
-# author: Maria Ambroselli
+# author: 
+Maria Ambroselli
 
 
 
 # Project local - npm start
-# localhost:5000
+localhost:5000
