@@ -27,7 +27,8 @@ function initAudio(element){
   $('#musicPlayer .artist').text(artist);
 
   //Insert Cover Image
-  $('img.cover').attr('src','img/'+ cover);
+  var coverURL = ('img/'+ cover);
+  $("div.cover").css("background-image", "url( '"+coverURL+"')");
 
   $('#playlist li').removeClass('active');
   element.addClass('active');
@@ -80,6 +81,16 @@ $('.prevBtn').click(function(){
       prev = $('#playlist li:last-child');
     }
     initAudio(prev);
+    audio.play();
+    showDuration();
+});
+
+//Click li
+$('#musicPlayer #playlist ul li').click(function(){
+    audio.pause();
+    var song = $(this);
+
+    initAudio(song);
     audio.play();
     showDuration();
 });

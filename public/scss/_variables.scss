@@ -1,0 +1,75 @@
+/* Global Fonts
+================================================== */
+$font: 'Quicksand', sans-serif;
+$font-extra: 'Raleway', sans-serif;
+
+/* Global Borders
+================================================== */
+$border: 1px solid rgba(86, 61, 124, .2);
+
+/* Global Colors
+================================================== */
+  $white          : #fff;
+  $black          : #000;
+
+  $dark-blue      : #013870;
+  $yellow         : #FEDC75;
+  $blue-green     : #01e08f;
+
+
+$light-grey       : #e9ecef;
+$norm-grey        : rgba(86, 61, 124, .2);
+$dark-grey        : rgb(53, 49, 72);
+
+$primary-color    : $dark-blue;
+$secondary-color  : $yellow;
+
+$text-color       : $dark-blue;
+
+/*gardients*/
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+  /* IE10+ */
+  background: -ms-linear-gradient(left, $from 0%, $to $stop);
+  /* Standard */
+  background: linear-gradient(to right, $from 0%, $to $stop);
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+
+/* SIDEBAR Colors
+================================================== */
+$sidebar-bg                   : $secondary-color;
+$sidebar-logo-color           : $black;
+$sidebar-social-color         : $text-color;
+
+
+/* NAVIGATION Colors
+================================================== */
+$nav-link-color               : $text-color;
+$nav-link-hover-color         : $blue-green;
+$nav-link-active-color        : $black;
+
+
+/* WRAPPER Colors
+================================================== */
+$wrapper-bg                   : $secondary-color;
+
+
+/*scrollbar in wrapper*/
+$scrollbar-bg                 : $secondary-color;
+$scrollbar-thumb              : $dark-blue;
+$scrollbar-thumb-hover        : $black;
+
+/* AUDIO Colors
+================================================== */

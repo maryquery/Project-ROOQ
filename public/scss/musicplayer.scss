@@ -1,59 +1,75 @@
+@import '_variables';
+
 #musicPlayer{
-  width: 16em;
-  height: auto;
+  width: 25em;
+  height: 25em;
   margin:10em auto 1em auto;
+  position: absolute;
+  left: -6em;
 
   #coverBlock{
     position: relative;
 
-    .cover{
-      background: #999;
-      width: 100%;
-      height: 16em;
+      .cover{
+        position: relative;
+        background: #999;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
 
-    }
+          .insideCover{
+            width: 10em;
+            height: 10em;
+            background: transparent;
+            border-radius: 100%;
+            border: 4em solid #000;
+            display: inline-block;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+          }
 
-    .insideCover{
-      width: 8em;
-      height: 8em;
-      background: transparent;
-      border-radius: 100%;
-      border: 3em solid #000;
-      display: inline-block;
-      position: absolute;
-      top: 26%;
-      left: 26%;
-    }
-  }
-  p{
-    margin-bottom: 0;
+        p{
+          float: left;
+          width: 100%;
+          color: $white;
+          text-align: center;
+          background: rgba(0,0,0, 0.5);
 
-    &.title{
-      font-size: 1.4em;
-      font-weight: bold;
-    }
-    &.artist{
-      margin-bottom: 1em;
-    }
-  }
-  #controls{
-    background: #fff;
-    height: auto;
-    padding: 0.5em 0 0.5em 0;
-    text-align: center;
+          &.title{
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 1em 0 0 0;
+          }
+          &.artist{
+            margin-bottom: 1em;
+          }
+        }
 
-    button{
-      border: none;
-      background: none;
-      font-size: 1.4em;
-      margin: 0 .5em 0 .5em;
+      #controls{
+        background: rgba(0,0,0, 0.5);
+        height: auto;
+        width: 100%;
+        padding: 0.5em 0 0.5em 0;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
 
-      &:hover{
-        cursor: pointer;
-        color: #545454;
+        button{
+          color: $white;
+          border: none;
+          background: none;
+          font-size: 1.4em;
+          margin: 0 .5em 0 .5em;
+
+          &:hover{
+            cursor: pointer;
+            color: #545454;
+          }
+        }
       }
-    }
   }
+}
 
 #volumeControl{
   height: 2em;
@@ -73,7 +89,11 @@
 #tracker{
   width: 100%;
   height: 3em;
-  padding: 1em 0 1em 0;
+  padding: 1em 1em;
+  background: #fff;
+  border: 2px solid #000;
+  border-top: none;
+  border-bottom: none;
 
   #progressbar{
     width: 80%;
@@ -84,7 +104,7 @@
     #progress{
       height:1em;
       width:0;
-      background: red;
+      background: $secondary-color;
       display: inline-block;
     }
   }
@@ -95,6 +115,10 @@
 }
 
   #playlist{
+    background: #fff;
+    border: 2px solid #000;
+    border-top: none;
+
     ul{
       list-style-type: none;
       padding: 0 0 0 0;
@@ -106,12 +130,50 @@
         &.active{
           font-weight: bold;
           background: #ccc;
+
+          &:before{
+            content: "\e924";
+            font-family: 'icons';
+            position: absolute;
+            left: 12px;
+          }
         }
 
         &:hover{
           background: #ccc;
         }
+
+        &:before{
+          content:"\e916";
+          font-family: 'icons';
+          position: absolute;
+          left: 12px;
+        }
+
+        &:last-child{
+          border-bottom: none;
+        }
       }
     }
   }
+}
+
+
+/* media queries
+================================================== */
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 960px) {
+
+  #musicPlayer {
+      width: 25em;
+      height: 25em;
+      margin: 5em auto 1em auto;
+      position: relative;
+      left: 0;
+  }
+
 }
