@@ -12,7 +12,15 @@ $border: 1px solid rgba(86, 61, 124, .2);
   $white          : #fff;
   $black          : #000;
 
-  $dark-blue      : #013870;
+  $dark-blue      : #070E2A;
+  $purple         : #283061;
+
+  $pink           : #E42D66;
+  $pink2          : #B6194B;
+  $dark-pink      : #581133;
+
+
+
   $yellow         : #FEDC75;
   $blue-green     : #01e08f;
 
@@ -22,48 +30,32 @@ $norm-grey        : rgba(86, 61, 124, .2);
 $dark-grey        : rgb(53, 49, 72);
 
 $primary-color    : $dark-blue;
-$secondary-color  : $yellow;
+$secondary-color  : $pink;
 
 $text-color       : $dark-blue;
 
 /*gardients*/
 
-@mixin horizontal-gradient($from, $to, $stop: 100%) {
-  /* fallback/image non-cover color */
-  background-color: $from;
-  /* Firefox 3.6+ */
-  background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
-  /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
-  /* Safari 5.1+, Chrome 10+ */
-  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
-  /* Opera 11.10+ */
-  background-image: -o-linear-gradient(left, $from 0%, $to $stop);
-  /* IE10+ */
-  background: -ms-linear-gradient(left, $from 0%, $to $stop);
-  /* Standard */
-  background: linear-gradient(to right, $from 0%, $to $stop);
-  /* IE6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
-}
+
 
 /* SIDEBAR Colors
 ================================================== */
-$sidebar-bg                   : $secondary-color;
-$sidebar-logo-color           : $black;
-$sidebar-social-color         : $text-color;
+$sidebar-bg                   : $dark-blue;
+$sidebar-logo-color           : $white;
+$sidebar-social-color         : $dark-blue;
+$sidebar-social-hover-color   : $dark-pink;
 
 
 /* NAVIGATION Colors
 ================================================== */
-$nav-link-color               : $text-color;
-$nav-link-hover-color         : $blue-green;
-$nav-link-active-color        : $black;
+$nav-link-color               : $dark-blue;
+$nav-link-hover-color         : $pink2;
+$nav-link-active-color        : $pink2;
 
 
 /* WRAPPER Colors
 ================================================== */
-$wrapper-bg                   : $secondary-color;
+$wrapper-bg                   : $dark-blue;
 
 
 /*scrollbar in wrapper*/
@@ -73,3 +65,24 @@ $scrollbar-thumb-hover        : $black;
 
 /* AUDIO Colors
 ================================================== */
+
+$musicplayer-cover-bg                   : $dark-blue;
+$musicplayer-cover-color                : #e4a81d;
+$musicplayer-controlls-bg               : rgba(0,0,0, 0.5);
+$musicplayer-controlls-color            : #e4a81d;
+$musicplayer-controlls-hover-color      : $dark-pink;
+
+$musicplayer-tracker-bg                 : #fff;
+$musicplayer-tracker-border-color       : #fff;
+$musicplayer-tracker-progressbar-bg     : $purple;
+$musicplayer-tracker-progress-bg        : rgba(0,0,0, 0.25);
+
+$musicplayer-tracker-duration-color     : #e4a81d;
+
+$musicplayer-playlist-border-color      : #fff;
+$musicplayer-playlist-bg                : #fff;
+$musicplayer-playlist-color             : $purple;
+$musicplayer-playlist-hover-bg          : rgba(0,0,0, 0.25);
+$musicplayer-playlist-hover-color       : $purple;
+$musicplayer-playlist-active-bg         : rgba(0,0,0, 0.25);
+$musicplayer-playlist-active-color      : $white;

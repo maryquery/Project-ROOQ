@@ -14,6 +14,9 @@ body{
   font-size: 1em;
   font-family: $font;
   position: relative;
+
+  background-image:
+  linear-gradient(to right bottom, #e4a81d, #dd6132, #b6194b, $dark-blue);
 }
 
 /* scrollbar styling*/
@@ -36,6 +39,9 @@ body{
     background: $scrollbar-thumb-hover;
 }
 
+h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
+
+
 /* Sidebar
 ================================================== */
  aside{
@@ -43,23 +49,14 @@ body{
    width: 20%;
    height: 100%;
    float: left;
-   @include  horizontal-gradient(hotpink, $secondary-color);
-
+  /* @include  horizontal-gradient($dark-pink, $dark-blue);
+   background-image:
+   linear-gradient(to right bottom, #e4a81d, #e58424, #dd6132, #ce3d3f, #b6194b, #070E2A);
+*/
    #logo{
      display: block;
      margin: 2em auto;
      color: $sidebar-logo-color;
-   }
-
-   #socialLinks{
-     width: 13em;
-     margin: 2em auto;
-     color: $sidebar-social-color;
-     font-size: 1.2em;
-
-      span{
-        padding: 0 0.45em;
-      }
    }
 
    nav{
@@ -84,7 +81,8 @@ body{
        &.active{
          color: $nav-link-active-color;
 
-         &:after{
+
+        /* &:after{
            content:"";
            width: 4em;
            height: 0.5em;
@@ -92,7 +90,7 @@ body{
            display: inline-block;
            float:right;
            margin:0.5em 0 0 0;
-         }
+         }*/
        }
      }
    }
@@ -105,6 +103,7 @@ body{
      margin: 0 auto;
      width: 100%;
      text-align: center;
+     color: $text-color;
    }
  }
 
@@ -114,10 +113,40 @@ body{
   height: 100%;
   width: 80%;
   float:left;
-  background: $wrapper-bg;
+
+  #socialLinks{
+    position: absolute;
+    right: 25%;
+    width: 13em;
+    margin: 2em auto;
+    color: $sidebar-social-color;
+    font-size: 1.2em;
+    z-index: 9999;
+
+     span{
+       padding: 0 0.45em;
+       cursor: pointer;
+
+       &:hover{
+         color: $sidebar-social-hover-color;
+       }
+     }
+  }
 
   section{
     float:left;
+
+    .headline{
+      width: auto;
+      opacity: 1;
+      position: relative;
+      top: 0px;
+      font-family: $font-extra;
+      animation-name: movefromtop;
+      animation-duration: 4s;
+      animation-timing-function: ease-in;
+      -webkit-animation-timing-function: ease-in;
+    }
 
     &#content{
       height: 100%;
@@ -129,6 +158,7 @@ body{
       section{
         padding: 10em 10em 5em 5em;
         height: 100%;
+        color: $text-color;
 
             //page-section PRODUCER
             &#producer{
@@ -143,17 +173,6 @@ body{
                 position: relative;
                 left: 0px;
                 animation-name: movefromleft;
-                animation-duration: 4s;
-                animation-timing-function: ease-in;
-                -webkit-animation-timing-function: ease-in;
-              }
-
-              .headline{
-                width: auto;
-                opacity: 1;
-                position: relative;
-                top: 0px;
-                animation-name: movefromtop;
                 animation-duration: 4s;
                 animation-timing-function: ease-in;
                 -webkit-animation-timing-function: ease-in;
@@ -215,7 +234,10 @@ body{
 
   aside{
     width: 100%;
-    height: 10em;
+    height: auto;
+    position: absolute;
+    top:0;
+    left:0;
 
     #logo{
       display: block;
@@ -226,7 +248,26 @@ body{
       margin: 1em 1em 0 0;
       float: right;
     }
-    nav{ display: none;}
+    nav{
+      float: right;
+      width: 67%;
+      margin: 2em 0 0 0;
+      right: 0;
+
+      a{
+        display: inline-block;
+        width: auto;
+        margin: 1em 2em 0 0;
+
+        &.active{
+          &:after{
+            content: "";
+            width: 0;
+            height: 0;
+          }
+        }
+      }
+    }
     footer{ display: none;}
   }
 
@@ -244,9 +285,13 @@ body{
     section{
       &#content{
         width: 100%;
+        section{
+          padding:10em 1em 5em 1em;
+        }
       }
       &#audio{
         width: 100%;
+        height: auto;
       }
     }
   }
