@@ -23,8 +23,10 @@
    </head>
    <body>
 
-     <!-- navigation start
+     <!-- navigation start-->
      <nav class="navbar">
+
+        <span class="logo"></span>
 
          <ul class="nav navbar-nav" id="navigation">
              <li><a href="#about" class="active">ABOUT</a></li>
@@ -33,30 +35,36 @@
              <li><a href="#contact">CONTAKT</a></li>
          </ul>
 
-      </nav> navigation end-->
+      </nav><!-- navigation end-->
 
-      <span id="logo"></span>
-
-      <div id="socialLinks">
-        <span class="icon-instagram"></span>
-        <span class="icon-twitter"></span>
-        <span class="icon-spotify"></span>
-        <span class="icon-youtube1"></span>
-        <span class="icon-facebook"></span>
-        <span class="icon-rss"></span>
-      </div>
 
      <!-- wrapper start-->
-     <main class="main" id="wrapper">
+     <main role="main" id="wrapper">
 
-              <section id="about" class="page-section">
+       <div id="socialLinks">
+         <span class="icon-instagram"></span>
+         <span class="icon-twitter"></span>
+         <span class="icon-spotify"></span>
+         <span class="icon-youtube1"></span>
+         <span class="icon-facebook"></span>
+         <span class="icon-rss"></span>
+       </div>
+
+       <div id="content">
+
+         <div class="container">
+           <div class="row">
+
+           <div class="col-sm-12 col-md-12">
+
+              <section id="about" class="page-section visible">
                 <h1 class="animated bounceInDown delay-2s headline">Lorem ipsum dolor sit amet</h1>
                 <div class="animated fadeInLeft delay-1s text">
                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </div>
               </section>
 
-              <section id="portfolio" class="page-section">
+              <section id="portfolio" class="page-section animated slideInLeft delay-1s hidden">
                 <h1 class="headline">Beats produced for this Arists</h1>
                   <span>Savas</span>
                   <span>Kollegah</span>
@@ -106,12 +114,12 @@
                   <span>Eunique</span>
               </section>
 
-              <section id="beats" class="page-section">
+              <section id="beats" class="page-section hidden">
                 <h1 class="headline">Beat Conditions/ Lizenze Stuff</h1>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
               </section>
 
-              <section id="contact" class="page-section">
+              <section id="contact" class="page-section hidden">
                 <h1 class="headline">CONTACT</h1>
 
                 <form>
@@ -138,49 +146,69 @@
                   <button type="submit" class="btn btn-primary">Send</button>
               </section>
 
-   </main> <!-- wrapper end -->
+            </div>
 
-   <!-- musicplayer start -->
-   <div id="musicPlayer">
-
-     <div id="controls">
-       <button class="icon-skip-back prevBtn"></button>
-       <button class="icon-play playBtn"></button>
-       <button class="icon-pause pauseBtn"></button>
-       <button class="icon-square stopBtn"></button>
-       <button class="icon-skip-forward nextBtn"></button>
-     </div>
-
-     <div id="coverBlock">
-       <div class="cover"></div>
-       <p class="title"></p>
-       <p class="artist"></p>
-     </div>
-
-     <!--<div id="volumeControl">
-       <span class="icon-volume-2"></span>
-       <input id="volume" type="range" min="0" max="10" value="5">
-     </div>-->
-
-      <div id="tracker">
-          <div id="progressbar">
-            <span id="progress"></span>
           </div>
-          <span id="duration"></span>
-      </div>
+        </div>
+       </section>
 
-      <div id="playlist">
-        <ul>
-          <li song="A.mp3" cover="cover.png" artist="Britney Spears">Hit me Baby</li>
-          <li song="B.mp3" cover="cover.png" artist="B">Beat Test Beat</li>
-          <li song="C.mp3" cover="cover.jpeg" artist="C">Beat Test Beat</li>
-          <li song="D.mp3" cover="cover.png" artist="D">Beat Test Beat</li>
-          <li song="E.mp3" cover="cover.jpeg" artist="F">Beat Test Beat</li>
-        </ul>
-      </div>
+       <section id="audio">
+         <div class="container">
+           <div class="row">
 
-    </div> <!-- musicplayer end -->
+           <div class="col-sm-12 col-md-12">
 
+             <!-- musicplayer start -->
+             <div id="musicPlayer">
+
+               <div id="coverBlock">
+                 <div class="cover"></div>
+                 <div class="tracker"></div>
+                 <p class="title"></p>
+                 <p class="artist"></p>
+                 <div id="controls">
+                   <button class="icon-skip-back prevBtn"></button>
+                   <button class="icon-play playBtn"></button>
+                   <button class="icon-pause pauseBtn"></button>
+                   <button class="icon-square stopBtn"></button>
+                   <button class="icon-skip-forward nextBtn"></button>
+                 </div>
+               </div>
+
+               <!--<div id="volumeControl">
+                 <span class="icon-volume-2"></span>
+                 <input id="volume" type="range" min="0" max="10" value="5">
+               </div>-->
+
+                  <div id="tracker">
+                    <div id="progressbar">
+                      <span id="progress"></span>
+                    </div>
+                    <span id="duration"></span>
+                  </div>
+
+                <div id="playlist">
+                  <ul>
+                    <li song="A.mp3" cover="cover.png" artist="Britney Spears">Hit me Baby</li>
+                    <li song="B.mp3" cover="cover.png" artist="B">Beat Test Beat</li>
+                    <li song="C.mp3" cover="cover.jpeg" artist="C">Beat Test Beat</li>
+                    <li song="D.mp3" cover="cover.png" artist="D">Beat Test Beat</li>
+                    <li song="E.mp3" cover="cover.jpeg" artist="F">Beat Test Beat</li>
+                  </ul>
+                </div>
+
+              </div> <!-- musicplayer end -->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- end content -->
+
+     </div>
+
+   </main> <!-- wrapper end -->
 
     <!-- js -->
     <script

@@ -8,15 +8,14 @@ body, html{
   min-width: 320px;
 }
 
-
 body{
   font-size: 100%;
   font-size: 1em;
   font-family: $font;
   position: relative;
-
-  background-image:
-  linear-gradient(to right bottom, #e4a81d, #dd6132, #b6194b, $dark-blue);
+  background-color: #e4a81d;
+  /*background-image:
+  linear-gradient(to right bottom, #e4a81d, #dd6132, #b6194b, $dark-blue);*/
 }
 
 /* scrollbar styling*/
@@ -41,87 +40,81 @@ body{
 
 h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
 
+.hidden{
+  visibility: hidden;
+  display: none;
+}
+
+.visible{
+  visibility: visible;
+  display:  block;
+}
+/* Navigation
+================================================== */
+nav{
+  float: left;
+  width: 14%;
+  height: 100%;
+  background-color: #e4a81d;
+  color: #070E2A;
+
+  ul{
+    margin: 0 auto 2em auto;
+    font-family: $font-extra;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    li{
+      margin: 2em 0 1em 0;
+
+      a{
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        color: #070E2A;
+
+        &:hover{
+          color: $nav-link-hover-color;
+          text-decoration: none;
+        }
+
+        &.active{
+          color: $nav-link-active-color;
+        }
+      }
+    }
+  }
+}
 
 /* Sidebar
 ================================================== */
- aside{
-   position: relative;
-   width: 20%;
-   height: 100%;
-   float: left;
+
   /* @include  horizontal-gradient($dark-pink, $dark-blue);
    background-image:
    linear-gradient(to right bottom, #e4a81d, #e58424, #dd6132, #ce3d3f, #b6194b, #070E2A);
 */
-   #logo{
-     display: block;
-     margin: 2em auto;
-     color: $sidebar-logo-color;
-   }
 
-   nav{
-     width: 12em;
-     margin: 6em auto 2em auto;
-     font-family: $font-extra;
-     font-weight: bold;
-     font-size: 1.2em;
-
-     a{
-       display: block;
-       width: 100%;
-       margin: 2em 0 1em 0;
-       cursor: pointer;
-       color: $nav-link-color;
-
-       &:hover{
-         color: $nav-link-hover-color;
-         text-decoration: none;
-       }
-
-       &.active{
-         color: $nav-link-active-color;
-
-
-        /* &:after{
-           content:"";
-           width: 4em;
-           height: 0.5em;
-           background: $nav-link-active-color;
-           display: inline-block;
-           float:right;
-           margin:0.5em 0 0 0;
-         }*/
-       }
-     }
-   }
-
-   footer{
-     position: absolute;
-     bottom: 0;
-     font-size: 0.69em;
-     padding: 1em 1em;
-     margin: 0 auto;
-     width: 100%;
-     text-align: center;
-     color: $text-color;
-   }
- }
-
- /* Wrapper - Container
- ================================================== */
-#wrapper{
-  height: 100%;
-  width: 80%;
-  float:left;
+  #logo{
+    width: 12em;
+    height: 6em;
+    position: fixed;
+    top: 2em;
+    left: 4em;
+    background: url('../img/_logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 999;
+  }
 
   #socialLinks{
-    position: absolute;
-    right: 25%;
+    position: fixed;
+    top: 1em;
+    right: 4em;
     width: 13em;
     margin: 2em auto;
     color: $sidebar-social-color;
     font-size: 1.2em;
-    z-index: 9999;
+    z-index: 999;
 
      span{
        padding: 0 0.45em;
@@ -133,35 +126,30 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
      }
   }
 
-  section{
-    float:left;
+ /* Wrapper - Container
+ ================================================== */
+#wrapper{
+  height: 100%;
+  width: 100%;
+  float:left;
 
-    .headline{
-      width: auto;
-      opacity: 1;
-      position: relative;
-      top: 0px;
-      font-family: $font-extra;
-      animation-name: movefromtop;
-      animation-duration: 4s;
-      animation-timing-function: ease-in;
-      -webkit-animation-timing-function: ease-in;
-    }
 
-    &#content{
-      height: 100%;
-      width: 70%;
-      overflow-y: hidden;
-      overflow-x: hidden;
-      position: relative;
-
-      section{
-        padding: 10em 10em 5em 5em;
+    section{
+        padding: 12em 18em;
         height: 100%;
         color: $text-color;
+        background: $wrapper-bg;
+
+        .headline{
+          width: auto;
+          opacity: 1;
+          position: relative;
+          top: 0px;
+          font-family: $font-extra;
+        }
 
             //page-section PRODUCER
-            &#producer{
+            &#about{
               width: 100%;
               font-family: $font;
               font-size: 1.2em;
@@ -172,15 +160,11 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
                 opacity: 1;
                 position: relative;
                 left: 0px;
-                animation-name: movefromleft;
-                animation-duration: 4s;
-                animation-timing-function: ease-in;
-                -webkit-animation-timing-function: ease-in;
               }
             }
 
             //page-section WORK
-            &#work{
+            &#portfolio{
                 span{
                   width: auto;
                   display: inline-block;
@@ -193,7 +177,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
             }
 
           &#contact{
-            width: 90%;
 
              form{
                margin: 2em 0 1em 0;
@@ -212,11 +195,19 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
                   background-color: tomato;
                 }
               }
-
             }
           }
-        }
+
+//when scroll then animation
+&.page-section{
+  &.section{
+    &.active{
+      .headline{
       }
+    }
+  }
+}
+        }
 
       &#audio{
         height: 100%;
@@ -224,75 +215,26 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
         width: 30%;
       }
 
-    }
-  }
+  } // wrapper end
 
 /* media queries
 ================================================== */
 
 @media (max-width: 1400px) {
 
-  aside{
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top:0;
-    left:0;
-
-    #logo{
-      display: block;
-      margin: 1em 0 1em 1em;
-      float:left;
-    }
-    #socialLinks{
-      margin: 1em 1em 0 0;
-      float: right;
-    }
-    nav{
-      float: right;
-      width: 67%;
-      margin: 2em 0 0 0;
-      right: 0;
-
-      a{
-        display: inline-block;
-        width: auto;
-        margin: 1em 2em 0 0;
-
-        &.active{
-          &:after{
-            content: "";
-            width: 0;
-            height: 0;
-          }
-        }
-      }
-    }
-    footer{ display: none;}
-  }
-
-  #wrapper{
-    width: 100%;
-  }
 
 }
 
 @media (max-width: 960px) {
 
+  .onepage-pagination{
+    left: 1em;
+  }
+
   #wrapper{
-    width: 100%;
 
     section{
-      &#content{
-        width: 100%;
-        section{
-          padding:10em 1em 5em 1em;
-        }
-      }
-      &#audio{
-        width: 100%;
-        height: auto;
-      }
+      padding: 12em 4em 2em 4em;
     }
   }
 

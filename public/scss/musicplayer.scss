@@ -1,30 +1,31 @@
 @import '_variables';
 
 #musicPlayer{
-  width: 25em;
-  height: 40em;
-  margin:10em auto 0 auto;
-  position: absolute;
-  left: -6em;
-  background: $white;
-  box-shadow: 0 0em 1em 0.1em rgba(0,0,0, 0.5);
+  width: 100%;
+  height: 8em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: $musicplayer-cover-bg;
+  color: #fff;
 
   #coverBlock{
-    position: relative;
+    position: absolute;
+    top: 1px;
+    width: 25%;
     height: auto;
 
       .cover{
         position: relative;
         background: $musicplayer-cover-bg;
-        box-shadow: 0 0em 1em 0.1em rgba(0,0,0, 0.5);
-        width: 10em;
-        height: 10em;
-        margin: 4em auto 2em auto;
+        width: 4em;
+        height: 4em;
+        margin: 1.5em 1em 0 4em;
         background-size: cover;
-        border-radius: 100%;
+        float:left;
       }
 
-      .tracker{
+      /*.tracker{
         position: absolute;
         top: -16px;
         left: 26%;
@@ -33,35 +34,36 @@
         height: 12em;
         border-radius: 100%;
         border: 0.15em solid #d2d2d2;
-      }
+      }*/
 
         p{
+          width: 60%;
           float: left;
-          width: 100%;
-          color: $musicplayer-cover-color;
-          text-align: center;
+          color: #fff;
+          text-align: left;
+          margin: 0;
 
           &.title{
-            font-size: 1.6em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin: 0 0 0 0;
+            margin: 1.5em 0 0 0;
           }
           &.artist{
-            margin-bottom: 1em;
           }
         }
+      }
 
       #controls{
         height: auto;
         width: 100%;
-        padding: 0.5em 0 0.5em 0;
+        padding: 2em 0 1em 0;
         text-align: center;
 
         button{
           color: $musicplayer-controlls-color;
           border: none;
           background: none;
-          font-size: 1.4em;
+          font-size: 1.6em;
           margin: 0 .5em 0 .5em;
 
           &:hover{
@@ -70,8 +72,6 @@
           }
         }
       }
-
-}
 
 #volumeControl{
   height: 2em;
@@ -89,16 +89,17 @@
 }
 
 #tracker{
-  width: 100%;
+  width: 45%;
   height: 3em;
   padding: 1em 1em;
-  background: $musicplayer-tracker-bg;
+  margin: 0 auto;
   /*border: 2px solid $musicplayer-tracker-border-color;*/
   border-top: none;
   border-bottom: none;
+  position: relative;
 
   #progressbar{
-    width: 80%;
+    width: 100%;
     height:0.5em;
     background: $musicplayer-tracker-progressbar-bg;
     border-radius: 0.25em;
@@ -114,12 +115,16 @@
   }
 
   #duration{
+    position: absolute;
+    top: 8px;
+    right: -2em;
     float: right;
     color: $musicplayer-tracker-duration-color;
   }
 }
 
   #playlist{
+    display: none;
     background: $musicplayer-playlist-bg;
     /*border: 2px solid $musicplayer-playlist-border-color;*/
     border-top: none;
@@ -179,41 +184,11 @@
 ================================================== */
 
 @media (max-width: 1400px) {
-  #musicPlayer {
-    left: -3em;
-  }
+
 }
 
 @media (max-width: 960px) {
 
-  #musicPlayer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 6em;
 
-    #coverBlock{
-      .cover{
-        background-image: none;
-        .insideCover{
-          display: none;
-        }
-        p{
-          width:auto;
-          &.artist {
-              margin: 0em;
-          }
-          &.title {
-              margin: 0em;
-          }
-        }
-      }
-    }
-
-    #playlist{
-      display: none;
-    }
-  }
 
 }

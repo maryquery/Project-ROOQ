@@ -15,59 +15,60 @@
 /* AUDIO Colors
 ================================================== */
 #musicPlayer {
-  width: 25em;
-  height: 40em;
-  margin: 10em auto 0 auto;
-  position: absolute;
-  left: -6em;
-  background: #fff;
-  box-shadow: 0 0em 1em 0.1em rgba(0, 0, 0, 0.5); }
+  width: 100%;
+  height: 8em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #070E2A;
+  color: #fff; }
   #musicPlayer #coverBlock {
-    position: relative;
-    height: auto; }
+    position: absolute;
+    top: 1px;
+    width: 25%;
+    height: auto;
+    /*.tracker{
+        position: absolute;
+        top: -16px;
+        left: 26%;
+        background: transparent;
+        width: 12em;
+        height: 12em;
+        border-radius: 100%;
+        border: 0.15em solid #d2d2d2;
+      }*/ }
     #musicPlayer #coverBlock .cover {
       position: relative;
       background: #070E2A;
-      box-shadow: 0 0em 1em 0.1em rgba(0, 0, 0, 0.5);
-      width: 10em;
-      height: 10em;
-      margin: 4em auto 2em auto;
+      width: 4em;
+      height: 4em;
+      margin: 1.5em 1em 0 4em;
       background-size: cover;
-      border-radius: 100%; }
-    #musicPlayer #coverBlock .tracker {
-      position: absolute;
-      top: -16px;
-      left: 26%;
-      background: transparent;
-      width: 12em;
-      height: 12em;
-      border-radius: 100%;
-      border: 0.15em solid #d2d2d2; }
+      float: left; }
     #musicPlayer #coverBlock p {
+      width: 60%;
       float: left;
-      width: 100%;
-      color: #e4a81d;
-      text-align: center; }
+      color: #fff;
+      text-align: left;
+      margin: 0; }
       #musicPlayer #coverBlock p.title {
-        font-size: 1.6em;
+        font-size: 1.2em;
         font-weight: bold;
-        margin: 0 0 0 0; }
-      #musicPlayer #coverBlock p.artist {
-        margin-bottom: 1em; }
-    #musicPlayer #coverBlock #controls {
-      height: auto;
-      width: 100%;
-      padding: 0.5em 0 0.5em 0;
-      text-align: center; }
-      #musicPlayer #coverBlock #controls button {
-        color: #e4a81d;
-        border: none;
-        background: none;
-        font-size: 1.4em;
-        margin: 0 .5em 0 .5em; }
-        #musicPlayer #coverBlock #controls button:hover {
-          cursor: pointer;
-          color: #581133; }
+        margin: 1.5em 0 0 0; }
+  #musicPlayer #controls {
+    height: auto;
+    width: 100%;
+    padding: 2em 0 1em 0;
+    text-align: center; }
+    #musicPlayer #controls button {
+      color: #e4a81d;
+      border: none;
+      background: none;
+      font-size: 1.6em;
+      margin: 0 .5em 0 .5em; }
+      #musicPlayer #controls button:hover {
+        cursor: pointer;
+        color: #581133; }
   #musicPlayer #volumeControl {
     height: 2em;
     width: 100%; }
@@ -76,15 +77,16 @@
       height: 1px;
       -webkit-appearance: none !important; }
   #musicPlayer #tracker {
-    width: 100%;
+    width: 45%;
     height: 3em;
     padding: 1em 1em;
-    background: #fff;
+    margin: 0 auto;
     /*border: 2px solid $musicplayer-tracker-border-color;*/
     border-top: none;
-    border-bottom: none; }
+    border-bottom: none;
+    position: relative; }
     #musicPlayer #tracker #progressbar {
-      width: 80%;
+      width: 100%;
       height: 0.5em;
       background: #283061;
       border-radius: 0.25em;
@@ -96,9 +98,13 @@
         background: rgba(0, 0, 0, 0.25);
         display: inline-block; }
     #musicPlayer #tracker #duration {
+      position: absolute;
+      top: 8px;
+      right: -2em;
       float: right;
       color: #e4a81d; }
   #musicPlayer #playlist {
+    display: none;
     background: #fff;
     /*border: 2px solid $musicplayer-playlist-border-color;*/
     border-top: none;
@@ -137,26 +143,3 @@
 
 /* media queries
 ================================================== */
-@media (max-width: 1400px) {
-  #musicPlayer {
-    left: -3em; } }
-
-@media (max-width: 960px) {
-  #musicPlayer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 6em; }
-    #musicPlayer #coverBlock .cover {
-      background-image: none; }
-      #musicPlayer #coverBlock .cover .insideCover {
-        display: none; }
-      #musicPlayer #coverBlock .cover p {
-        width: auto; }
-        #musicPlayer #coverBlock .cover p.artist {
-          margin: 0em; }
-        #musicPlayer #coverBlock .cover p.title {
-          margin: 0em; }
-    #musicPlayer #playlist {
-      display: none; } }
