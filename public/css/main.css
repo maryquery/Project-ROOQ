@@ -31,17 +31,18 @@
 /* AUDIO Colors
 ================================================== */
 #musicPlayer {
+  min-width: 320px;
   width: 100%;
   height: 8em;
   position: fixed;
   bottom: 0;
   left: 0;
-  background: #070E2A;
+  background: #000;
   color: #fff; }
   #musicPlayer #coverBlock {
     position: absolute;
     top: 1px;
-    width: 25%;
+    width: auto;
     height: auto;
     /*.tracker{
         position: absolute;
@@ -55,7 +56,7 @@
       }*/ }
     #musicPlayer #coverBlock .cover {
       position: relative;
-      background: #070E2A;
+      background: #000;
       width: 4em;
       height: 4em;
       margin: 1.5em 1em 0 4em;
@@ -119,46 +120,81 @@
       right: -2em;
       float: right;
       color: #e4a81d; }
-  #musicPlayer #playlist {
-    display: none;
-    background: #fff;
-    /*border: 2px solid $musicplayer-playlist-border-color;*/
-    border-top: none;
-    color: #283061; }
-    #musicPlayer #playlist ul {
-      list-style-type: none;
-      padding: 0 0 0 0; }
-      #musicPlayer #playlist ul li {
-        /*border-bottom: 1px solid #999;*/
-        padding: 0.5em 0 0.5em 2em;
-        cursor: pointer; }
-        #musicPlayer #playlist ul li.active {
-          font-weight: bold;
-          background: rgba(0, 0, 0, 0.25);
-          color: #fff; }
-          #musicPlayer #playlist ul li.active:before {
-            content: "\e924";
-            font-family: 'icons';
-            position: absolute;
-            left: 12px; }
-          #musicPlayer #playlist ul li.active:after {
-            content: "\e900";
-            font-family: 'icons';
-            position: absolute;
-            right: 1em; }
-        #musicPlayer #playlist ul li:hover {
-          background: rgba(0, 0, 0, 0.25);
-          color: #283061; }
-        #musicPlayer #playlist ul li:before {
-          content: "\e916";
+
+/*PLAYLIST
+================================================== */
+#playlist {
+  display: block;
+  position: relative;
+  background: none;
+  /*border: 2px solid $musicplayer-playlist-border-color;*/
+  border-top: none;
+  color: #283061; }
+  #playlist ul {
+    list-style-type: none;
+    padding: 0 0 0 0; }
+    #playlist ul li {
+      /*border-bottom: 1px solid #999;*/
+      padding: 0 0 0em 2em;
+      line-height: 3em;
+      cursor: pointer; }
+      #playlist ul li.active {
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.25);
+        color: #fff; }
+        #playlist ul li.active:before {
+          content: "\e924";
           font-family: 'icons';
           position: absolute;
           left: 12px; }
-        #musicPlayer #playlist ul li:last-child {
-          border-bottom: none; }
+        #playlist ul li.active:after {
+          content: "\e900";
+          font-family: 'icons';
+          position: absolute;
+          right: 1em; }
+      #playlist ul li:hover {
+        background: rgba(0, 0, 0, 0.25);
+        color: #283061; }
+      #playlist ul li:before {
+        content: "\e916";
+        font-family: 'icons';
+        position: absolute;
+        left: 12px; }
+      #playlist ul li:last-child {
+        border-bottom: none; }
 
 /* media queries
 ================================================== */
+@media (max-width: 960px) {
+  #musicPlayer {
+    height: 6em; }
+    #musicPlayer #coverBlock {
+      width: 100%; }
+      #musicPlayer #coverBlock .cover {
+        display: none; }
+      #musicPlayer #coverBlock p {
+        text-align: center;
+        margin: 0; }
+        #musicPlayer #coverBlock p.title {
+          font-size: 0.98em;
+          width: 100%;
+          margin: 0; }
+        #musicPlayer #coverBlock p.artist {
+          font-size: 0.8em;
+          width: 100%; }
+    #musicPlayer #controls {
+      padding: 3em 0 0 0; }
+      #musicPlayer #controls button {
+        font-size: 1.2em; }
+    #musicPlayer #tracker {
+      width: 100%;
+      top: -11px; }
+      #musicPlayer #tracker #duration {
+        top: -6px;
+        right: 1em;
+        float: right;
+        font-size: 0.8em; } }
+
 /* animation - Move to the left  */
 @keyframes movefromleft {
   from {
@@ -276,11 +312,31 @@ nav {
     #socialLinks span:hover {
       color: #581133; }
 
+#mobileMenu {
+  display: none; }
+  #mobileMenu .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.89);
+    padding: 4em 1em 1em 2em; }
+    #mobileMenu .menu.active {
+      display: block; }
+    #mobileMenu .menu a {
+      color: #fff;
+      width: 100%;
+      display: block;
+      line-height: 2em; }
+
 /* Wrapper - Container
  ================================================== */
 #wrapper {
   height: 100%;
   width: 100%;
+  min-width: 320px;
   float: left; }
   #wrapper section {
     padding: 12em 18em;
@@ -289,10 +345,19 @@ nav {
     background: #e4a81d; }
     #wrapper section .headline {
       width: auto;
-      opacity: 1;
       position: relative;
       top: 0px;
-      font-family: "Raleway", sans-serif; }
+      font-family: "Raleway", sans-serif;
+      opacity: 0; }
+      #wrapper section .headline.active {
+        opacity: 0; }
+    #wrapper section .text {
+      opacity: 0; }
+      #wrapper section .text.active {
+        opacity: 0; }
+    #wrapper section.active .headline,
+    #wrapper section.active .text {
+      opacity: 0; }
     #wrapper section#about {
       width: 100%;
       font-family: "Quicksand", sans-serif;
@@ -329,8 +394,50 @@ nav {
 
 /* media queries
 ================================================== */
+@media (max-width: 1400px) {
+  #wrapper section {
+    padding: 12em 8em; } }
+
 @media (max-width: 960px) {
   .onepage-pagination {
-    left: 1em; }
+    left: 1em !important; }
+  #logo {
+    width: 9em;
+    height: 5em;
+    left: 3em; }
   #wrapper section {
-    padding: 12em 4em 2em 4em; } }
+    padding: 10em 4em 2em 4em; }
+    #wrapper section .headline {
+      font-size: 1.4em; }
+    #wrapper section .text {
+      font-size: 1em; }
+    #wrapper section#portfolio span {
+      font-size: 1em; }
+  #socialLinks {
+    top: 0em;
+    right: 1em;
+    width: 2em; }
+    #socialLinks span {
+      margin: 0 0 0.5em 0;
+      display: block; } }
+
+@media (max-width: 460px) {
+  #socialLinks {
+    display: none; }
+  #mobileMenu {
+    display: block;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 9; }
+    #mobileMenu ul {
+      padding: 0;
+      list-style-type: none; }
+  #wrapper section {
+    padding: 9em 2em 2em 3em; }
+    #wrapper section .headline {
+      font-size: 1.2em; }
+    #wrapper section .text {
+      font-size: 0.8em; } }

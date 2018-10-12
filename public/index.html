@@ -46,18 +46,31 @@
         <span class="icon-rss"></span>
       </div>
 
+      <div id="mobileMenu">
+        <span class="icon-menu"></span>
+        <div class="menu">
+          <ul>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">BEATS</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+
      <!-- wrapper start-->
      <main class="main" id="wrapper">
 
               <section id="about" class="page-section">
-                <h1 class="animated bounceInDown delay-2s headline">Lorem ipsum dolor sit amet</h1>
-                <div class="animated fadeInLeft delay-1s text">
+                <h1 class="animated bounceInDown headline">ABOUT</h1>
+                <div class="animated fadeInLeft text">
                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </div>
               </section>
 
               <section id="portfolio" class="page-section">
-                <h1 class="headline">Beats produced for this Arists</h1>
+                <h1 class="headline">PORTFOLIO</h1>
+                <div class="text">
                   <span>Savas</span>
                   <span>Kollegah</span>
                   <span>Farid Bang</span>
@@ -104,38 +117,51 @@
                   <span>Witten Untouchable</span>
                   <span>Jasko</span>
                   <span>Eunique</span>
+                  <article>
+                    Artikel in Magazinen:
+                  </article>
+                </div>
               </section>
 
               <section id="beats" class="page-section">
-                <h1 class="headline">Beat Conditions/ Lizenze Stuff</h1>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <h1 class="headline">Beat Playlist</h1>
+                <div id="playlist" class="text">
+                  <ul>
+                    <li song="Apollo Snippet 145 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Apollo Snippet 145 Bpm</li>
+                    <li song="Drops Snippet 134 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Drops Snippet 134 Bpm</li>
+                    <li song="Sheets Snippet 134 Bpm.mp3" cover="cover.jpeg" artist="prod. ROOQ">Sheets Snippet 134 Bpm</li>
+                    <li song="Thumper Snippet 136 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Thumper Snippet 136 Bpm</li>
+                  </ul>
+                </div>
               </section>
 
               <section id="contact" class="page-section">
                 <h1 class="headline">CONTACT</h1>
+                <div class="text">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputName">Name</label>
+                      <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleTextarea">Your message</label>
+                      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
 
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputName">Name</label>
-                    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleTextarea">Your message</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                  </div>
-
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input">
-                      Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Send</button>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Check me out
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </from>
+                </div>
               </section>
 
    </main> <!-- wrapper end -->
@@ -167,16 +193,6 @@
             <span id="progress"></span>
           </div>
           <span id="duration"></span>
-      </div>
-
-      <div id="playlist">
-        <ul>
-          <li song="A.mp3" cover="cover.png" artist="Britney Spears">Hit me Baby</li>
-          <li song="B.mp3" cover="cover.png" artist="B">Beat Test Beat</li>
-          <li song="C.mp3" cover="cover.jpeg" artist="C">Beat Test Beat</li>
-          <li song="D.mp3" cover="cover.png" artist="D">Beat Test Beat</li>
-          <li song="E.mp3" cover="cover.jpeg" artist="F">Beat Test Beat</li>
-        </ul>
       </div>
 
     </div> <!-- musicplayer end -->

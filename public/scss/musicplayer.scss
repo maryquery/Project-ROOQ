@@ -1,6 +1,7 @@
 @import '_variables';
 
 #musicPlayer{
+  min-width: 320px;
   width: 100%;
   height: 8em;
   position: fixed;
@@ -12,7 +13,7 @@
   #coverBlock{
     position: absolute;
     top: 1px;
-    width: 25%;
+    width: auto;
     height: auto;
 
       .cover{
@@ -105,80 +106,83 @@
     border-radius: 0.25em;
     float:left;
 
-    #progress{
-      height:0.5em;
-      border-radius: 0.25em;
-      width:0;
-      background: $musicplayer-tracker-progress-bg;
-      display: inline-block;
+      #progress{
+        height:0.5em;
+        border-radius: 0.25em;
+        width:0;
+        background: $musicplayer-tracker-progress-bg;
+        display: inline-block;
+      }
     }
-  }
 
-  #duration{
-    position: absolute;
-    top: 8px;
-    right: -2em;
-    float: right;
-    color: $musicplayer-tracker-duration-color;
+    #duration{
+      position: absolute;
+      top: 8px;
+      right: -2em;
+      float: right;
+      color: $musicplayer-tracker-duration-color;
+    }
   }
 }
 
-  #playlist{
-    display: none;
-    background: $musicplayer-playlist-bg;
-    /*border: 2px solid $musicplayer-playlist-border-color;*/
-    border-top: none;
-    color: $musicplayer-playlist-color;
+/*PLAYLIST
+================================================== */
+#playlist{
+  display: block;
+  position: relative;
+  background: none;
+  /*border: 2px solid $musicplayer-playlist-border-color;*/
+  border-top: none;
+  color: $musicplayer-playlist-color;
 
-    ul{
-      list-style-type: none;
-      padding: 0 0 0 0;
+  ul{
+    list-style-type: none;
+    padding: 0 0 0 0;
 
-      li{
-        /*border-bottom: 1px solid #999;*/
-        padding: 0.5em 0 0.5em 2em;
-        cursor: pointer;
+    li{
+      /*border-bottom: 1px solid #999;*/
+      padding: 0 0 0em 2em;
+      line-height: 3em;
+      cursor: pointer;
 
-        &.active{
-          font-weight: bold;
-          background: $musicplayer-playlist-active-bg;
-          color:$musicplayer-playlist-active-color;
-
-          &:before{
-            content: "\e924";
-            font-family: 'icons';
-            position: absolute;
-            left: 12px;
-          }
-
-          &:after{
-            content: "\e900";
-            font-family: 'icons';
-            position: absolute;
-            right: 1em;
-          }
-        }
-
-        &:hover{
-          background: $musicplayer-playlist-hover-bg;
-          color: $musicplayer-playlist-hover-color;
-        }
+      &.active{
+        font-weight: bold;
+        background: $musicplayer-playlist-active-bg;
+        color:$musicplayer-playlist-active-color;
 
         &:before{
-          content:"\e916";
+          content: "\e924";
           font-family: 'icons';
           position: absolute;
           left: 12px;
         }
 
-        &:last-child{
-          border-bottom: none;
+        &:after{
+          content: "\e900";
+          font-family: 'icons';
+          position: absolute;
+          right: 1em;
         }
+      }
+
+      &:hover{
+        background: $musicplayer-playlist-hover-bg;
+        color: $musicplayer-playlist-hover-color;
+      }
+
+      &:before{
+        content:"\e916";
+        font-family: 'icons';
+        position: absolute;
+        left: 12px;
+      }
+
+      &:last-child{
+        border-bottom: none;
       }
     }
   }
 }
-
 
 /* media queries
 ================================================== */
@@ -189,6 +193,50 @@
 
 @media (max-width: 960px) {
 
+#musicPlayer{
+  height: 6em;
 
+  #coverBlock {
+    width:100%;
+
+    .cover{
+      display: none;
+    }
+    p{
+      text-align: center;
+      margin: 0;
+
+      &.title{
+        font-size: 0.98em;
+        width: 100%;
+        margin: 0;
+      }
+      &.artist{
+        font-size: 0.8em;
+        width: 100%;
+      }
+    }
+  }
+
+  #controls{
+    padding: 3em 0 0 0;
+
+    button{
+      font-size:1.2em;
+    }
+  }
+
+  #tracker{
+    width: 100%;
+    top: -11px;
+
+    #duration{
+      top: -6px;
+      right: 1em;
+      float: right;
+      font-size: 0.8em;
+    }
+  }
+}
 
 }

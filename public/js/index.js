@@ -8,13 +8,13 @@ $(document).ready(function(){
      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
      beforeMove: function(index) {
-
+       $('.active .headline').removeClass('animated bounceInDown');
+       $('.active .text').removeClass('animated fadeInLeft');
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
-       var page = index;
-       console.log(index);
 
-       $('.active .headline').toggleClass('animated bounceInDown');
+       $('.active .headline').addClass('animated bounceInDown');
+       $('.active .text').addClass('animated fadeInLeft');
 
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
@@ -25,7 +25,28 @@ $(document).ready(function(){
      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
+//  if( $('section').hasClass('.active') ){
+  //  $('.headline').toggleClass('animated bounceInDown');
+    //console.log('123');
+  //};
 
 
+  $('#mobileMenu').on('click' , function(e){
+    event.preventDefault();
+    $('.menu').toggleClass('active');
+  });
+
+
+  $('#mobileMenu .menu ul li').click(function(){
+
+    var sectionPos =  $('.main section').index();
+    var elementPos =  $(this).index();
+
+    console.log( sectionPos );
+    console.log( elementPos );
+
+    $(".main section").moveTo(elementPos+1);
+
+  });
 
 });
