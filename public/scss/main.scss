@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
   visibility: visible;
   display:  block;
 }
+
 /* Navigation
 ================================================== */
 nav{
@@ -86,14 +87,8 @@ nav{
   }
 }
 
-/* Sidebar
+/*  Logo
 ================================================== */
-
-  /* @include  horizontal-gradient($dark-pink, $dark-blue);
-   background-image:
-   linear-gradient(to right bottom, #e4a81d, #e58424, #dd6132, #ce3d3f, #b6194b, #070E2A);
-*/
-
   #logo{
     width: 12em;
     height: 6em;
@@ -106,6 +101,8 @@ nav{
     z-index: 999;
   }
 
+/* Social Links
+================================================== */
   #socialLinks{
     position: fixed;
     top: 1em;
@@ -126,6 +123,8 @@ nav{
      }
   }
 
+/* Menu - mobile
+================================================== */
   #mobileMenu{
     display: none;
 
@@ -150,8 +149,8 @@ nav{
     }
   }
 
- /* Wrapper - Container
- ================================================== */
+/* Wrapper - Container
+================================================== */
 #wrapper{
   height: 100%;
   width: 100%;
@@ -170,7 +169,12 @@ nav{
           position: relative;
           top: 0px;
           font-family: $font-extra;
+          opacity: 0;
+        }
 
+        .text{
+          opacity: 0;
+        }
 
             //page-section PRODUCER
             &#about{
@@ -198,6 +202,40 @@ nav{
                   font-size: 1.4em;
                   font-weight: bold;
                 }
+
+                article{
+                  margin: 2em 0 0 0;
+
+                   h4{
+                     font-family: $font-extra;
+
+                     &:before{
+                       font-family: 'icons';
+                       content:'\e906';
+                       margin-right: 0.5em;
+                     }
+                   }
+
+                  a{
+                    font-family: $font;
+                    font-size: 0.89em;
+                    text-decoration: none;
+                    color: #000;
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0.5em 0 0 0;
+
+                    &:before{
+                      font-family: 'icons';
+                      content:'\e90b';
+                      width: 1em;
+                    }
+
+                    &:hover{
+                      color: #fff;
+                    }
+                  }
+                }
             }
 
           &#contact{
@@ -222,23 +260,13 @@ nav{
             }
           }
 
-//when scroll then animation
-&.page-section{
-  &.section{
-    &.active{
-      .headline{
-      }
-    }
-  }
-}
-        }
-
       &#audio{
         height: 100%;
         background: #fff;
         width: 30%;
       }
 
+    } // section end
   } // wrapper end
 
 /* media queries
@@ -286,20 +314,13 @@ nav{
       }
     }
   }
-
-  #socialLinks{
-    top: 0em;
-    right: 1em;
-    width: 2em;
-
-    span{
-      margin: 0 0 0.5em 0;
-      display: block;
-    }
-  }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 640px) {
+
+  .onepage-pagination{
+    left: 0.25em !important;
+  }
 
   #socialLinks{ display: none;}
 

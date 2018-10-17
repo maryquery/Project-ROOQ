@@ -10,6 +10,7 @@ $(document).ready(function(){
      beforeMove: function(index) {
        $('.active .headline').removeClass('animated bounceInDown');
        $('.active .text').removeClass('animated fadeInLeft');
+
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
 
@@ -49,4 +50,43 @@ $(document).ready(function(){
 
   });
 
+
+
 });
+
+
+
+Amplitude.init({
+		"songs": [
+			{
+				"name": "Apollo Snippet 145 Bpm",
+				"artist": "ROOQ",
+				"album": "Album Name",
+				"url": "../src/audio/ApolloSnippet145Bpm.mp3",
+        "duration": "03:00",
+			},
+			{
+				"name": "Drops Snippet 134 Bpm",
+				"artist": "ROOQ",
+				"album": "Album Name",
+				"url": "../src/audio/Drops Snippet 134 Bpm.mp3",
+			},
+			{
+				"name": "Sheets Snippet 134 Bpm",
+				"artist": "ROOQ",
+				"album": "Album Name",
+				"url": "../src/audio/Sheets Snippet 134 Bpm.mp3",
+			},
+			{
+				"name": "Thumper Snippet 136 Bpm",
+				"artist": "ROOQ",
+				"album": "Album Name",
+				"url": "../src/audio/Thumper Snippet 136 Bpm.mp3",
+			}
+		],
+		"playlists": {
+			"beats": [
+				0, 1, 2, 3
+			]
+		}
+	});

@@ -62,8 +62,8 @@
      <main class="main" id="wrapper">
 
               <section id="about" class="page-section">
-                <h1 class="animated bounceInDown headline">ABOUT</h1>
-                <div class="animated fadeInLeft text">
+                <h1 class="headline animated bounceInDown">ABOUT</h1>
+                <div class="text animated fadeInLeft">
                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </div>
               </section>
@@ -117,21 +117,86 @@
                   <span>Witten Untouchable</span>
                   <span>Jasko</span>
                   <span>Eunique</span>
+
                   <article>
-                    Artikel in Magazinen:
+                    <h4>Artikel in Magazinen</h4>
+                      <a href="https://rap.de/c37-interview/79547-producers-mind-rooq/" target="_blank">
+                        Producer's Mind: Rooq <strong>| RAP.DE </strong>
+                      </a>
+                      <a href="http://www.mzee.com/2016/08/rooq/" target="_blank">
+                        SOUNDCHECK <strong>| MZEE </strong>
+                      </a>
+                      <a href="https://snipes-blog.com/rooq-schenkt-dir-sein-instrumental-album/" target="_blank">
+                        Rooq schenkt dir sein Instrumental-Album! <strong>| SNIPES-BLOG </strong>
+                      </a>
+                      <a href="https://rap.de/allgemein/63303-rooq-kritisiert-berichterstattung-ueber-money-boy-kommentar/" target="_blank">
+                        Rooq kritisiert Berichterstattung über Money Boy <strong>| RAP.DE </strong>
+                      </a>
+                      <a href="https://hiphop.de/magazin/ehrliches-statement-von-rooq-ueberraschung-fuer-xatar-props-307234" target="_blank">
+                        Ehrliches Statement: Xatar erhält überraschend Props von Rooq <strong>| HIPHOP.DE </strong>
+                      </a>
                   </article>
+
                 </div>
               </section>
 
               <section id="beats" class="page-section">
-                <h1 class="headline">Beat Playlist</h1>
+                <h1 class="headline">Beats</h1>
                 <div id="playlist" class="text">
-                  <ul>
-                    <li song="Apollo Snippet 145 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Apollo Snippet 145 Bpm</li>
-                    <li song="Drops Snippet 134 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Drops Snippet 134 Bpm</li>
-                    <li song="Sheets Snippet 134 Bpm.mp3" cover="cover.jpeg" artist="prod. ROOQ">Sheets Snippet 134 Bpm</li>
-                    <li song="Thumper Snippet 136 Bpm.mp3" cover="cover.png" artist="prod. ROOQ">Thumper Snippet 136 Bpm</li>
-                  </ul>
+
+                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+                    <span class="song-number-now-playing">
+                      <span class="number">1</span>
+                      <span class="icon-play"></span>
+                      <span class="icon-pause"></span>
+                    </span>
+
+                    <div class="song-meta-container">
+                      <span class="song-name">Apollo Snippet 145 Bpm</span>
+                      <span class="song-artist-album">ROOQ</span>
+                     </span>
+                    </div>
+                  </div>
+
+                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+                    <span class="song-number-now-playing">
+                      <span class="number">2</span>
+                      <span class="icon-play"></span>
+                      <span class="icon-pause"></span>
+                    </span>
+
+                    <div class="song-meta-container">
+                      <span class="song-name">Drops Snippet 134 Bpm</span>
+                      <span class="song-artist-album">ROOQ</span>
+                    </div>
+                  </div>
+
+                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+                    <span class="song-number-now-playing">
+                      <span class="number">3</span>
+                      <span class="icon-play"></span>
+                      <span class="icon-pause"></span>
+                    </span>
+
+                    <div class="song-meta-container">
+                      <span class="song-name">Sheets Snippet 134 Bpm</span>
+                      <span class="song-artist-album">ROOQ</span>
+                    </div>
+                  </div>
+
+                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
+                    <span class="song-number-now-playing">
+                      <span class="number">4</span>
+                      <span class="icon-play"></span>
+                      <span class="icon-pause"></span>
+                    </span>
+
+                    <div class="song-meta-container">
+                      <span class="song-name">Thumper Snippet 136 Bpm</span>
+                      <span class="song-artist-album">ROOQ</span>
+                    </div>
+                  </div>
+
                 </div>
               </section>
 
@@ -169,31 +234,36 @@
    <!-- musicplayer start -->
    <div id="musicPlayer">
 
-     <div id="controls">
-       <button class="icon-skip-back prevBtn"></button>
-       <button class="icon-play playBtn"></button>
-       <button class="icon-pause pauseBtn"></button>
-       <button class="icon-square stopBtn"></button>
-       <button class="icon-skip-forward nextBtn"></button>
+     <div id="player-progress-bar-container">
+       <progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
+       <!--<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>-->
+     </div>
+
+     <div id="time-container">
+       <span class="amplitude-current-time time-container" amplitude-main-current-time="true"></span>
+       <span class="amplitude-duration-time time-container" amplitude-main-duration-time="true"></span>
      </div>
 
      <div id="coverBlock">
-       <div class="cover"></div>
-       <p class="title"></p>
-       <p class="artist"></p>
+       <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+       <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
      </div>
 
-     <!--<div id="volumeControl">
-       <span class="icon-volume-2"></span>
-       <input id="volume" type="range" min="0" max="10" value="5">
-     </div>-->
+     <div id="controls">
+       <span class="amplitude-prev icon-skip-back"></span>
+       <span class="button amplitude-play-pause" amplitude-main-play-pause="true"></span>
+       <span class="amplitude-next icon-skip-forward"></span>
+       <!--<span class="amplitude-mute"></span>-->
+     </div>
 
-      <div id="tracker">
-          <div id="progressbar">
-            <span id="progress"></span>
-          </div>
-          <span id="duration"></span>
-      </div>
+     <div id="volume-container">
+				          <div class="volume-controls">
+				            <span class="amplitude-mute amplitude-not-muted"></span>
+				            <input type="range" class="amplitude-volume-slider"/>
+				            <div class="ms-range-fix"></div>
+				          </div>
+				          <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
+				        </div>
 
     </div> <!-- musicplayer end -->
 
@@ -213,13 +283,16 @@
     <script language="javascript" type="text/javascript"
               src="/bootstrap/dist/js/bootstrap.js"></script>
 
+    <!-- ampitude js - - musicplayer -->
+    <script language="javascript" type="text/javascript"
+              src="/amplitudejs/dist/amplitude.js"></script>
+
     <!-- onepage scroll js -->
     <script language="javascript" type="text/javascript"
               src="/js/jquery.onepage-scroll.js"></script>
 
     <!-- own js -->
     <script language="javascript" type="text/javascript" src="/js/index.js"></script>
-    <script language="javascript" type="text/javascript" src="/js/musicplayer.js"></script>
 
    </body>
 </html>
