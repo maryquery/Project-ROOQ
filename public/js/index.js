@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  //$('.headline').hasClass('active').addClass('animated bounceInDown');
+  //$('.text').hasClass('active').addClass('animated fadeInLeft');
+
+console.log('ready');
+
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -10,7 +15,7 @@ $(document).ready(function(){
      beforeMove: function(index) {
        $('.active .headline').removeClass('animated bounceInDown');
        $('.active .text').removeClass('animated fadeInLeft');
-
+console.log('123');
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
 
@@ -52,8 +57,19 @@ $(document).ready(function(){
 
 
 
-});
+  if( $('.headline').parent().hasClass('active') ){
+    $('.headline').addClass('animated bounceInDown');
+  }else{
+    console.log('else');
+  };
 
+  if( $('.text').parent().hasClass('active') ){
+    $('.text').addClass('animated bounceInDown');
+  }else{
+    console.log('else');
+  };
+
+});
 
 
 Amplitude.init({

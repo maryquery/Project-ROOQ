@@ -297,11 +297,15 @@ nav {
   color: #070E2A;
   font-size: 1.2em;
   z-index: 999; }
-  #socialLinks span {
-    padding: 0 0.45em;
-    cursor: pointer; }
-    #socialLinks span:hover {
-      color: #581133; }
+  #socialLinks a {
+    color: #000; }
+    #socialLinks a:hover {
+      text-decoration: none; }
+    #socialLinks a span {
+      padding: 0 0.45em;
+      cursor: pointer; }
+      #socialLinks a span:hover {
+        color: #581133; }
 
 /* Menu - mobile
 ================================================== */
@@ -323,6 +327,17 @@ nav {
       width: 100%;
       display: block;
       line-height: 2em; }
+    #mobileMenu .menu #socialLinks {
+      display: block;
+      margin: 4em 0 0 0;
+      position: relative;
+      left: 0em;
+      color: #fff;
+      font-size: 0.8em; }
+      #mobileMenu .menu #socialLinks a {
+        color: #fff;
+        display: inline;
+        z-index: 999999; }
 
 /* Wrapper - Container
 ================================================== */
@@ -351,7 +366,7 @@ nav {
       line-height: 1.8em; }
       #wrapper section#about .text {
         width: auto;
-        opacity: 1;
+        opacity: 0;
         position: relative;
         left: 0px; }
     #wrapper section#portfolio span {
@@ -389,12 +404,23 @@ nav {
       #wrapper section#contact form .form-control {
         border-radius: 0; }
       #wrapper section#contact form .btn-primary {
-        background-color: hotpink;
+        background-color: black;
         border-color: transparent;
         border-radius: 0;
         width: 8em; }
         #wrapper section#contact form .btn-primary:hover {
-          background-color: tomato; }
+          background-color: grey; }
+    #wrapper section#contact .info {
+      margin: 4em 0; }
+      #wrapper section#contact .info .impress {
+        font-size: 1.2em;
+        margin: 0 0 2em 0;
+        cursor: pointer; }
+        #wrapper section#contact .info .impress:hover {
+          font-weight: bold; }
+      #wrapper section#contact .info a {
+        font-size: 0.89em;
+        margin: 2em 0 0 0; }
     #wrapper section#audio {
       height: 100%;
       background: #fff;

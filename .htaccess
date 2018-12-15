@@ -1,0 +1,4 @@
+AuthName "project ROOQ"
+AuthType Basic
+AuthUserFile  /cgi-bin/rooq.productions/.htpasswd
+require valid-user
