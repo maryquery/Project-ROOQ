@@ -207,3 +207,24 @@
 .icon-youtube:before {
   content: "\ea9d";
 }
+.icon-bullhorn:before {
+  content: "\e937";
+}
+.icon-mic:before {
+  content: "\e938";
+}
+.icon-spinner:before {
+  content: "\e97a";
+}
+.icon-spinner2:before {
+  content: "\e97b";
+}
+.icon-appleinc:before {
+  content: "\eabe";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
