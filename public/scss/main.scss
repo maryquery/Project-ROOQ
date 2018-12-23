@@ -1,11 +1,12 @@
 @import '_variables';
-@import 'musicplayer';
 @import 'keyframes';
 
 /* Setup
 ================================================== */
 body, html{
   min-width: 320px;
+  min-height: 100%;
+  background-color: #e4a81d;
 }
 
 body{
@@ -39,6 +40,11 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: $font-extra;}
+
+a{
+  text-decoration: none;
+  color: $dark-pink;
+}
 
 .hidden{
   visibility: hidden;
@@ -87,89 +93,111 @@ nav{
   }
 }
 
-/*  Logo
+/*  Header
 ================================================== */
-  #logo{
-    width: 12em;
-    height: 6em;
-    position: fixed;
-    top: 2em;
-    left: 4em;
-    background: url('../img/_logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 999;
-  }
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12em;
+  @include gradient;
+  z-index: 999;
 
-/* Social Links
-================================================== */
-  #socialLinks{
-    position: fixed;
-    top: 1em;
-    right: 4em;
-    width: 13em;
-    margin: 2em auto;
-    color: $sidebar-social-color;
-    font-size: 1.2em;
-    z-index: 999;
-
-    a{
-      color: #000;
-
-      &:hover{
-        text-decoration: none;
-      }
-
-      span{
-        padding: 0 0.45em;
-        cursor: pointer;
-
-        &:hover{
-          color: $sidebar-social-hover-color;
-        }
-      }
+  /*  Logo
+  ================================================== */
+    #logo{
+      display: block;
+      width: 12em;
+      height: 6em;
+      position: absolute;
+      top: 2em;
+      left: 4em;
+      background: url('../img/_logo.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
-  }
 
-/* Menu - mobile
-================================================== */
-  #mobileMenu{
-    display: none;
-
-    .menu{
-      display: none;
-      position: fixed;
-      top:0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0, 0.89);
-      padding: 4em 1em 1em 2em;
-
-      &.active{ display: block;}
-
-      a{
-        color: #fff;
-        width: 100%;
-        display: block;
-        line-height: 2em;
-      }
-
+    /* Social Links
+    ================================================== */
       #socialLinks{
         display: block;
-        margin: 4em 0 0 0;
-        position: relative;
-        left: -1em;
-        color: #fff;
-        font-size: 0.8em;
+        position: absolute;
+        top: 1em;
+        right: 4em;
+        width: 13em;
+        margin: 2em auto;
+        color: $sidebar-social-color;
+        font-size: 1.2em;
+        z-index: 999;
 
         a{
-          color: #fff;
-          display: inline;
-          z-index: 999999;
+          color: #000;
+
+          &:hover{
+            text-decoration: none;
+          }
+
+          span{
+            padding: 0 0.45em;
+            cursor: pointer;
+
+            &:hover{
+              color: $pink;
+            }
+          }
         }
       }
-    }
+
+      /* Menu - mobile
+      ================================================== */
+        #mobileMenu{
+          display: none;
+
+          .menu{
+            display: none;
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0, 0.89);
+            padding: 4em 1em 1em 2em;
+
+            &.active{ display: block;}
+
+            .icon-cross{
+              color: #fff;
+              position: absolute;
+              top: 1em;
+              right: 1em;
+            }
+
+            a{
+              color: #fff;
+              width: 100%;
+              display: block;
+              line-height: 2em;
+            }
+
+            #socialLinks{
+              display: block;
+              position: relative;
+              top: 0;
+              left: 0;
+              margin: 4em 0 0 0;
+              color: #fff;
+              font-size: 0.8em;
+
+              a{
+                color: #fff;
+                display: inline;
+                z-index: 999999;
+              }
+            }
+          }
+        }
+
   }
 
 /* Wrapper - Container
@@ -179,11 +207,11 @@ nav{
   width: 100%;
   min-width: 320px;
   float:left;
+  background: $wrapper-bg;
 
 
     section{
         padding: 12em 18em;
-        height: 100%;
         color: $text-color;
         background: $wrapper-bg;
 
@@ -198,6 +226,14 @@ nav{
         .text{
           opacity: 0;
 
+        }
+
+        a{
+          color: $pink;
+
+          &:hover{
+            color: $dark-pink;
+          }
         }
 
             //page-section PRODUCER
@@ -262,6 +298,7 @@ nav{
                 }
             }
 
+          //page-section CONTACT
           &#contact{
 
              form{
@@ -282,6 +319,7 @@ nav{
                 }
               }
             }
+
             .info{
               margin: 4em 0;
 
@@ -299,18 +337,25 @@ nav{
                 font-size: 0.89em;
                 margin: 2em 0 0 0;
               }
-            }
 
+            }
+    } // section end
+
+    //page IMPRESS
+    &#impress{
+
+          h1{
+            font-family: $font-extra;
           }
 
-      &#audio{
-        height: 100%;
-        background: #fff;
-        width: 30%;
-      }
+          p{
+            font-family: $font;
+          }
+    }// section end
 
-    } // section end
   } // wrapper end
+}
+
 
 /* media queries
 ================================================== */
@@ -332,16 +377,26 @@ nav{
     left: 1em !important;
   }
 
-  #logo{
-    width: 9em;
-    height: 5em;
-    left: 4em;
+  header{
+    height: 8em;
+    @include gradient_m;
+
+    #logo{
+      width: 9em;
+      height: 5em;
+      top: 1em;
+      left: 4em;
+    }
+
+    #socialLinks{
+      margin: 0 auto;
+    }
   }
 
   #wrapper{
 
     section{
-      padding: 10em 4em 2em 4em;
+      padding: 8em 4em 2em 4em;
 
       .headline{
         font-size: 1.4em;
@@ -353,6 +408,20 @@ nav{
       &#portfolio{
         span{
           font-size: 1em;
+          margin: 0 0.5em 0 0;
+          line-height: 1em;
+        }
+
+        h4{
+          font-size: 1.4em;
+        }
+
+          article{
+            a {
+              font-size: 0.89em;
+              margin: 0.15em 0 0 0;
+              text-indent: 0;
+          }
         }
       }
     }
@@ -361,30 +430,35 @@ nav{
 
 @media (max-width: 640px) {
 
-  #logo {
-      left: 2em;
+  header{
+    height: 6em;
+    @include gradient_s;
+
+    #logo {
+        left: 2em;
+        top: 1em;
+    }
+
+    #socialLinks{ display: none;}
+
+    #mobileMenu{
+      display: block;
+      position: fixed;
       top: 1em;
+      right: 1em;
+      font-size: 2em;
+      cursor: pointer;
+      z-index: 9;
+
+      ul{
+        padding:0;
+        list-style-type: none;
+      }
+    }
   }
 
   .onepage-pagination{
     left: 0.25em !important;
-  }
-
-  #socialLinks{ display: none;}
-
-  #mobileMenu{
-    display: block;
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 9;
-
-    ul{
-      padding:0;
-      list-style-type: none;
-    }
   }
 
   #wrapper{
@@ -401,6 +475,15 @@ nav{
         font-size: 0.8em;
         line-height: 1.4em;
       }
+
+      &#portfolio{
+        article{
+          a {
+            text-indent: -14px;
+          }
+        }
+      }
+
     }
   }
 

@@ -4,7 +4,6 @@
 ================================================== */
 /* Global Colors
 ================================================== */
-/*gardients*/
 /* SIDEBAR Colors
 ================================================== */
 /* NAVIGATION Colors
@@ -12,182 +11,6 @@
 /* WRAPPER Colors
 ================================================== */
 /*scrollbar in wrapper*/
-/* AUDIO Colors
-================================================== */
-/* Global Fonts
-================================================== */
-/* Global Borders
-================================================== */
-/* Global Colors
-================================================== */
-/*gardients*/
-/* SIDEBAR Colors
-================================================== */
-/* NAVIGATION Colors
-================================================== */
-/* WRAPPER Colors
-================================================== */
-/*scrollbar in wrapper*/
-/* AUDIO Colors
-================================================== */
-#musicPlayer {
-  min-width: 320px;
-  width: 100%;
-  height: 8em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.75);
-  color: #e4a81d; }
-  #musicPlayer #controls {
-    height: auto;
-    width: 100%;
-    padding: 1em 0 0 0;
-    text-align: center; }
-    #musicPlayer #controls span {
-      font-size: 1.6em;
-      margin: 0 0.5em 0 0; }
-      #musicPlayer #controls span:hover {
-        color: #c2c2c2; }
-    #musicPlayer #controls .amplitude-play-pause.amplitude-playing:before {
-      content: "\e924";
-      font-family: 'icons'; }
-    #musicPlayer #controls .amplitude-play-pause.amplitude-paused:before {
-      content: "\e922";
-      font-family: 'icons'; }
-    #musicPlayer #controls .amplitude-play-pause.amplitude-mute:before {
-      content: "\e935";
-      font-family: 'icons'; }
-  #musicPlayer #coverBlock {
-    text-align: center;
-    margin: 1em 0 0 0;
-    font-family: "Raleway", sans-serif; }
-  #musicPlayer #player-progress-bar-container #song-played-progress {
-    width: 100%;
-    height: 0.5em;
-    background: #000; }
-  #musicPlayer #time-container {
-    font-family: "Quicksand", sans-serif;
-    font-size: 1em; }
-    #musicPlayer #time-container .amplitude-current-time {
-      float: left;
-      margin: 0 0 0 1em; }
-    #musicPlayer #time-container .amplitude-duration-time {
-      float: right;
-      margin: 0 1em 0 0; }
-  #musicPlayer #volume-container {
-    position: absolute;
-    left: 1em;
-    top: 4em; }
-    #musicPlayer #volume-container .amplitude-mute.amplitude-not-muted:before {
-      content: "\e934";
-      font-family: 'icons'; }
-    #musicPlayer #volume-container .amplitude-mute.amplitude-muted:before {
-      content: "\e935";
-      font-family: 'icons'; }
-    #musicPlayer #volume-container .amplitude-volume-slider {
-      -webkit-appearance: none;
-      height: 1px; }
-
-/*PLAYLIST
-================================================== */
-#playlist {
-  display: block;
-  position: relative;
-  background: none;
-  /*border: 2px solid $musicplayer-playlist-border-color;*/
-  border-top: none;
-  color: #283061; }
-  #playlist .song {
-    font-family: "Quicksand", sans-serif;
-    border-bottom: 1px solid #000;
-    cursor: pointer;
-    width: 100%;
-    float: left; }
-    #playlist .song:hover {
-      background: rgba(0, 0, 0, 0.15); }
-    #playlist .song .song-number-now-playing {
-      float: left;
-      margin: 0 1em 0 0;
-      line-height: 3em;
-      min-width: 1em; }
-    #playlist .song .song-meta-container {
-      float: left;
-      margin: 0 1em 0 0; }
-      #playlist .song .song-meta-container .song-name {
-        margin: 0 1em 0 0;
-        font-family: "Raleway", sans-serif;
-        line-height: 3em;
-        display: block;
-        float: left;
-        min-width: 14em; }
-      #playlist .song .song-meta-container .song-artist-album {
-        line-height: 3em; }
-        #playlist .song .song-meta-container .song-artist-album span {
-          margin: 0 0.5em 0 0;
-          line-height: 3em;
-          display: block;
-          float: left; }
-    #playlist .song .song-duration {
-      margin: 0 0 0 2em;
-      line-height: 3em; }
-    #playlist .song .number {
-      display: block; }
-    #playlist .song .icon-play {
-      display: none; }
-    #playlist .song .icon-pause {
-      display: none; }
-    #playlist .song .amplitude-current-time {
-      display: none; }
-    #playlist .song .amplitude-duration-time {
-      display: block; }
-    #playlist .song.amplitude-active-song-container.amplitude-paused .number {
-      display: none; }
-    #playlist .song.amplitude-active-song-container.amplitude-paused .icon-play {
-      display: none; }
-    #playlist .song.amplitude-active-song-container.amplitude-paused .icon-pause {
-      display: block;
-      line-height: 3em;
-      min-width: 1em; }
-    #playlist .song.amplitude-active-song-container.amplitude-playing .number {
-      display: none; }
-    #playlist .song.amplitude-active-song-container.amplitude-playing .icon-pause {
-      display: none; }
-    #playlist .song.amplitude-active-song-container.amplitude-playing .icon-play {
-      display: block;
-      line-height: 3em;
-      min-width: 1em; }
-    #playlist .song.amplitude-active-song-container .amplitude-current-time {
-      display: block; }
-    #playlist .song.amplitude-active-song-container .amplitude-duration-time {
-      display: none; }
-
-/* media queries
-================================================== */
-@media (max-width: 960px) {
-  #musicPlayer {
-    height: 6em; }
-    #musicPlayer #coverBlock {
-      width: 100%; }
-      #musicPlayer #coverBlock .cover {
-        display: none; }
-      #musicPlayer #coverBlock p {
-        text-align: center;
-        margin: 0; }
-        #musicPlayer #coverBlock p.title {
-          font-size: 0.98em;
-          width: 100%;
-          margin: 0; }
-        #musicPlayer #coverBlock p.artist {
-          font-size: 0.8em;
-          width: 100%; }
-    #musicPlayer #controls {
-      padding: 0; }
-      #musicPlayer #controls button {
-        font-size: 1.2em; }
-    #musicPlayer #time-container {
-      font-size: 0.79em; } }
-
 /* animation - Move to the left  */
 @keyframes movefromleft {
   from {
@@ -206,10 +29,13 @@
     opacity: 1;
     top: 0px; } }
 
+/** MIXIN gardients **/
 /* Setup
 ================================================== */
 body, html {
-  min-width: 320px; }
+  min-width: 320px;
+  min-height: 100%;
+  background-color: #e4a81d; }
 
 body {
   font-size: 100%;
@@ -226,7 +52,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #E42D66; }
+  background: #e4a81d; }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -238,6 +64,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #581133; }
 
 .hidden {
   visibility: hidden;
@@ -273,71 +103,94 @@ nav {
         nav ul li a.active {
           color: #B6194B; }
 
-/*  Logo
+/*  Header
 ================================================== */
-#logo {
-  width: 12em;
-  height: 6em;
+header {
   position: fixed;
-  top: 2em;
-  left: 4em;
-  background: url("../img/_logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 999; }
-
-/* Social Links
-================================================== */
-#socialLinks {
-  position: fixed;
-  top: 1em;
-  right: 4em;
-  width: 13em;
-  margin: 2em auto;
-  color: #070E2A;
-  font-size: 1.2em;
-  z-index: 999; }
-  #socialLinks a {
-    color: #000; }
-    #socialLinks a:hover {
-      text-decoration: none; }
-    #socialLinks a span {
-      padding: 0 0.45em;
-      cursor: pointer; }
-      #socialLinks a span:hover {
-        color: #581133; }
-
-/* Menu - mobile
-================================================== */
-#mobileMenu {
-  display: none; }
-  #mobileMenu .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.89);
-    padding: 4em 1em 1em 2em; }
-    #mobileMenu .menu.active {
-      display: block; }
-    #mobileMenu .menu a {
-      color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12em;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4a81d+0,ffffff+100&1+0,0+100 */
+  background: -moz-linear-gradient(top, #e4a81d 75%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e4a81d 75%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e4a81d 75%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4a81d', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */
+  z-index: 999;
+  /*  Logo
+  ================================================== */
+  /* Social Links
+    ================================================== */
+  /* Menu - mobile
+      ================================================== */ }
+  header #logo {
+    display: block;
+    width: 12em;
+    height: 6em;
+    position: absolute;
+    top: 2em;
+    left: 4em;
+    background: url("../img/_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  header #socialLinks {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 4em;
+    width: 13em;
+    margin: 2em auto;
+    color: #070E2A;
+    font-size: 1.2em;
+    z-index: 999; }
+    header #socialLinks a {
+      color: #000; }
+      header #socialLinks a:hover {
+        text-decoration: none; }
+      header #socialLinks a span {
+        padding: 0 0.45em;
+        cursor: pointer; }
+        header #socialLinks a span:hover {
+          color: #E42D66; }
+  header #mobileMenu {
+    display: none; }
+    header #mobileMenu .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      display: block;
-      line-height: 2em; }
-    #mobileMenu .menu #socialLinks {
-      display: block;
-      margin: 4em 0 0 0;
-      position: relative;
-      left: -1em;
-      color: #fff;
-      font-size: 0.8em; }
-      #mobileMenu .menu #socialLinks a {
+      height: 100%;
+      background: rgba(0, 0, 0, 0.89);
+      padding: 4em 1em 1em 2em; }
+      header #mobileMenu .menu.active {
+        display: block; }
+      header #mobileMenu .menu .icon-cross {
         color: #fff;
-        display: inline;
-        z-index: 999999; }
+        position: absolute;
+        top: 1em;
+        right: 1em; }
+      header #mobileMenu .menu a {
+        color: #fff;
+        width: 100%;
+        display: block;
+        line-height: 2em; }
+      header #mobileMenu .menu #socialLinks {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 4em 0 0 0;
+        color: #fff;
+        font-size: 0.8em; }
+        header #mobileMenu .menu #socialLinks a {
+          color: #fff;
+          display: inline;
+          z-index: 999999; }
 
 /* Wrapper - Container
 ================================================== */
@@ -345,10 +198,10 @@ nav {
   height: 100%;
   width: 100%;
   min-width: 320px;
-  float: left; }
+  float: left;
+  background: #e4a81d; }
   #wrapper section {
     padding: 12em 18em;
-    height: 100%;
     color: #070E2A;
     background: #e4a81d; }
     #wrapper section .headline {
@@ -359,6 +212,10 @@ nav {
       opacity: 0; }
     #wrapper section .text {
       opacity: 0; }
+    #wrapper section a {
+      color: #E42D66; }
+      #wrapper section a:hover {
+        color: #581133; }
     #wrapper section#about {
       width: 100%;
       font-family: "Quicksand", sans-serif;
@@ -421,10 +278,10 @@ nav {
       #wrapper section#contact .info a {
         font-size: 0.89em;
         margin: 2em 0 0 0; }
-    #wrapper section#audio {
-      height: 100%;
-      background: #fff;
-      width: 30%; }
+    #wrapper section#impress h1 {
+      font-family: "Raleway", sans-serif; }
+    #wrapper section#impress p {
+      font-family: "Quicksand", sans-serif; }
 
 /* media queries
 ================================================== */
@@ -435,42 +292,77 @@ nav {
 @media (max-width: 960px) {
   .onepage-pagination {
     left: 1em !important; }
-  #logo {
-    width: 9em;
-    height: 5em;
-    left: 4em; }
+  header {
+    height: 8em;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4a81d+0,ffffff+100&1+0,0+100 */
+    background: -moz-linear-gradient(top, #e4a81d 85%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e4a81d 85%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e4a81d 85%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4a81d', endColorstr='#00ffffff',GradientType=0 );
+    /* IE6-9 */ }
+    header #logo {
+      width: 9em;
+      height: 5em;
+      top: 1em;
+      left: 4em; }
+    header #socialLinks {
+      margin: 0 auto; }
   #wrapper section {
-    padding: 10em 4em 2em 4em; }
+    padding: 8em 4em 2em 4em; }
     #wrapper section .headline {
       font-size: 1.4em; }
     #wrapper section .text {
       font-size: 1em; }
     #wrapper section#portfolio span {
-      font-size: 1em; } }
+      font-size: 1em;
+      margin: 0 0.5em 0 0;
+      line-height: 1em; }
+    #wrapper section#portfolio h4 {
+      font-size: 1.4em; }
+    #wrapper section#portfolio article a {
+      font-size: 0.89em;
+      margin: 0.15em 0 0 0;
+      text-indent: 0; } }
 
 @media (max-width: 640px) {
-  #logo {
-    left: 2em;
-    top: 1em; }
+  header {
+    height: 6em;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4a81d+0,ffffff+100&1+0,0+100 */
+    background: -moz-linear-gradient(top, #e4a81d 90%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e4a81d 90%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e4a81d 90%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4a81d', endColorstr='#00ffffff',GradientType=0 );
+    /* IE6-9 */ }
+    header #logo {
+      left: 2em;
+      top: 1em; }
+    header #socialLinks {
+      display: none; }
+    header #mobileMenu {
+      display: block;
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      font-size: 2em;
+      cursor: pointer;
+      z-index: 9; }
+      header #mobileMenu ul {
+        padding: 0;
+        list-style-type: none; }
   .onepage-pagination {
     left: 0.25em !important; }
-  #socialLinks {
-    display: none; }
-  #mobileMenu {
-    display: block;
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 9; }
-    #mobileMenu ul {
-      padding: 0;
-      list-style-type: none; }
   #wrapper section {
     padding: 7em 2em 6em 2em; }
     #wrapper section .headline {
       font-size: 1.2em; }
     #wrapper section .text {
       font-size: 0.8em;
-      line-height: 1.4em; } }
+      line-height: 1.4em; }
+    #wrapper section#portfolio article a {
+      text-indent: -14px; } }

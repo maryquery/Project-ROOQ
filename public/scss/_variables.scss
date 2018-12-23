@@ -21,7 +21,7 @@ $border: 1px solid rgba(86, 61, 124, .2);
 
 
 
-  $yellow         : #FEDC75;
+  $yellow         : #e4a81d;
   $blue-green     : #01e08f;
 
 
@@ -30,12 +30,11 @@ $norm-grey        : rgba(86, 61, 124, .2);
 $dark-grey        : rgb(53, 49, 72);
 
 $primary-color    : $dark-blue;
-$secondary-color  : $pink;
+$secondary-color  : $yellow;
 
 $text-color       : $dark-blue;
 
-/*gardients*/
-
+$transparent      : rgba(0, 0, 0, .0);
 
 
 /* SIDEBAR Colors
@@ -62,27 +61,3 @@ $wrapper-bg                   : #e4a81d;
 $scrollbar-bg                 : $secondary-color;
 $scrollbar-thumb              : $dark-blue;
 $scrollbar-thumb-hover        : $black;
-
-/* AUDIO Colors
-================================================== */
-
-$musicplayer-cover-bg                   : rgba(0,0,0, 0.75);
-$musicplayer-cover-color                : #e4a81d;
-$musicplayer-controlls-bg               : rgba(0,0,0, 0.5);
-$musicplayer-controlls-color            : #e4a81d;
-$musicplayer-controlls-hover-color      : $dark-pink;
-
-$musicplayer-tracker-bg                 : #fff;
-$musicplayer-tracker-border-color       : #fff;
-$musicplayer-tracker-progressbar-bg     : $purple;
-$musicplayer-tracker-progress-bg        : rgba(0,0,0, 0.25);
-
-$musicplayer-tracker-duration-color     : #e4a81d;
-
-$musicplayer-playlist-border-color      : #fff;
-$musicplayer-playlist-bg                : #fff;
-$musicplayer-playlist-color             : $purple;
-$musicplayer-playlist-hover-bg          : rgba(0,0,0, 0.25);
-$musicplayer-playlist-hover-color       : $purple;
-$musicplayer-playlist-active-bg         : rgba(0,0,0, 0.25);
-$musicplayer-playlist-active-color      : $white;

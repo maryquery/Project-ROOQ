@@ -1,11 +1,30 @@
 <html>
-   <head>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131339252-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131339252-1');
+    </script>
+
      <title>ROOQ Productions</title>
      <meta charset="UTF-8">
      <meta name="description" content="ROOQ Production">
      <meta name="keywords" content="ROOQ Production">
      <meta name="author" content="ROOQ Production">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+     <link rel="manifest" href="/img/favicon/site.webmanifest">
+     <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
+     <meta name="msapplication-TileColor" content="#e4a81d">
+     <meta name="theme-color" content="#e4a81d">
+
      <!-- own style -->
      <link rel="stylesheet" href="/css/main.css">
      <!-- bootstrap style -->
@@ -23,48 +42,40 @@
    </head>
    <body>
 
-     <!-- navigation start
-     <nav class="navbar">
+     <!-- header start-->
+     <header>
+        <span id="logo"></span>
 
-         <ul class="nav navbar-nav" id="navigation">
-             <li><a href="#about" class="active">ABOUT</a></li>
-             <li><a href="#portfolio">PORTFOLIO</a></li>
-             <li><a href="#beats">BEATS</a></li>
-             <li><a href="#contact">CONTAKT</a></li>
-         </ul>
+        <div id="socialLinks">
+          <a href="https://instagram.com/therooq" target="_blank"><span class="icon-instagram"></span></a>
+          <a href="https://twitter.com/rooq" target="_blank"><span class="icon-twitter"></span></a>
+          <a href="https://open.spotify.com/artist/2Ssd74fqRLnOnYxWxXXqxR?si=H5HbeB0PQwu7mystX_QLmQ" target="_blank"><span class="icon-spotify"></span></a>
+          <a href="https://www.youtube.com/user/Rooq1/videos" target="_blank"><span class="icon-youtube1"></span></a>
+          <a href="https://facebook.com/therooq" target="_blank"><span class="icon-facebook"></span></a>
+          <a href="https://itunes.apple.com/de/artist/rooq/187559982" target="_blank"><span class="icon-appleinc"></span></a>
+        </div>
 
-      </nav> navigation end-->
-
-      <span id="logo"></span>
-
-      <div id="socialLinks">
-        <a href="https://instagram.com/therooq" target="_blank"><span class="icon-instagram"></span></a>
-        <a href="https://twitter.com/rooq" target="_blank"><span class="icon-twitter"></span></a>
-        <a href="https://open.spotify.com/artist/2Ssd74fqRLnOnYxWxXXqxR?si=H5HbeB0PQwu7mystX_QLmQ" target="_blank"><span class="icon-spotify"></span></a>
-        <a href="https://www.youtube.com/user/Rooq1/videos" target="_blank"><span class="icon-youtube1"></span></a>
-        <a href="https://facebook.com/therooq" target="_blank"><span class="icon-facebook"></span></a>
-        <a href="https://itunes.apple.com/de/artist/rooq/187559982" target="_blank"><span class="icon-appleinc"></span></a>
-      </div>
-
-      <div id="mobileMenu">
-        <span class="icon-menu"></span>
-        <div class="menu">
-          <ul>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">PORTFOLIO</a></li>
-            <li><a href="">BEATS</a></li>
-            <li><a href="">CONTACT</a></li>
-          </ul>
-          <div id="socialLinks">
-            <a href="https://instagram.com/therooq" target="_blank"><span class="icon-instagram"></span></a>
-            <a href="https://twitter.com/rooq" target="_blank"><span class="icon-twitter"></span></a>
-            <a href="https://open.spotify.com/artist/2Ssd74fqRLnOnYxWxXXqxR?si=H5HbeB0PQwu7mystX_QLmQ" target="_blank"><span class="icon-spotify"></span></a>
-            <a href="https://www.youtube.com/user/Rooq1/videos" target="_blank"><span class="icon-youtube1"></span></a>
-            <a href="https://facebook.com/therooq" target="_blank"><span class="icon-facebook"></span></a>
-            <a href="https://itunes.apple.com/de/artist/rooq/187559982" target="_blank"><span class="icon-appleinc"></span></a>
+        <div id="mobileMenu">
+          <span class="icon-menu"></span>
+          <div class="menu">
+            <span class="icon-cross"></span>
+            <ul>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">PORTFOLIO</a></li>
+              <li><a href="">BEATS</a></li>
+              <li><a href="">CONTACT</a></li>
+            </ul>
+            <div id="socialLinks">
+              <a href="https://instagram.com/therooq" target="_blank"><span class="icon-instagram"></span></a>
+              <a href="https://twitter.com/rooq" target="_blank"><span class="icon-twitter"></span></a>
+              <a href="https://open.spotify.com/artist/2Ssd74fqRLnOnYxWxXXqxR?si=H5HbeB0PQwu7mystX_QLmQ" target="_blank"><span class="icon-spotify"></span></a>
+              <a href="https://www.youtube.com/user/Rooq1/videos" target="_blank"><span class="icon-youtube1"></span></a>
+              <a href="https://facebook.com/therooq" target="_blank"><span class="icon-facebook"></span></a>
+              <a href="https://itunes.apple.com/de/artist/rooq/187559982" target="_blank"><span class="icon-appleinc"></span></a>
+            </div>
           </div>
         </div>
-      </div>
+    </header><!-- header end-->
 
      <!-- wrapper start-->
      <main class="main" id="wrapper">
@@ -125,6 +136,10 @@
                   <span>Witten Untouchable</span>
                   <span>Jasko</span>
                   <span>Eunique</span>
+                  <span>Mehnersmoos</span>
+                  <span>Marvin Game</span>
+                  <span>Estikay</span>
+                  <span>Mortel</span>
 
                   <article>
                     <h4>Artikel in Magazinen</h4>
@@ -151,79 +166,32 @@
               <section id="beats" class="page-section">
                 <h1 class="headline">Beats</h1>
                 <div id="playlist" class="text">
-
-                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
-                    <span class="song-number-now-playing">
-                      <span class="number">1</span>
-                      <span class="icon-play"></span>
-                      <span class="icon-pause"></span>
-                    </span>
-
-                    <div class="song-meta-container">
-                      <span class="song-name">Apollo Snippet 145 Bpm</span>
-                      <span class="song-artist-album">ROOQ</span>
-                     </span>
-                    </div>
-                  </div>
-
-                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
-                    <span class="song-number-now-playing">
-                      <span class="number">2</span>
-                      <span class="icon-play"></span>
-                      <span class="icon-pause"></span>
-                    </span>
-
-                    <div class="song-meta-container">
-                      <span class="song-name">Drops Snippet 134 Bpm</span>
-                      <span class="song-artist-album">ROOQ</span>
-                    </div>
-                  </div>
-
-                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
-                    <span class="song-number-now-playing">
-                      <span class="number">3</span>
-                      <span class="icon-play"></span>
-                      <span class="icon-pause"></span>
-                    </span>
-
-                    <div class="song-meta-container">
-                      <span class="song-name">Sheets Snippet 134 Bpm</span>
-                      <span class="song-artist-album">ROOQ</span>
-                    </div>
-                  </div>
-
-                  <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
-                    <span class="song-number-now-playing">
-                      <span class="number">4</span>
-                      <span class="icon-play"></span>
-                      <span class="icon-pause"></span>
-                    </span>
-
-                    <div class="song-meta-container">
-                      <span class="song-name">Thumper Snippet 136 Bpm</span>
-                      <span class="song-artist-album">ROOQ</span>
-                    </div>
-                  </div>
-
+                  <iframe src="https://player.beatstars.com/?storeId=93766"
+                                              scrolling="no" width="100%" height="800" style="max-width:1024px;"
+                                              frameborder="0" marginheight="0" marginwidth="0"> -- none -- </iframe>
                 </div>
               </section>
 
               <section id="contact" class="page-section">
                 <h1 class="headline">CONTACT</h1>
-                <div class="text">
-                  <form>
+
+                <div class="text" id="contact-area">
+
+                  <form method="post" action="contactengine.php">
                     <div class="form-group">
-                      <label for="exampleInputName">Name</label>
-                      <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Name">
+                      <label for="Name">Name</label>
+                      <input type="text" name="Name" class="form-control" id="Name" aria-describedby="nameHelp" placeholder="Enter Name">
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <label for="Email">Email address</label>
+                      <input type="text" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
                       <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
                     </div>
+
                     <div class="form-group">
-                      <label for="exampleTextarea">Your message</label>
-                      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                      <label for="Message">Your message</label>
+                      <textarea class="form-control" id="Message" rows="3"></textarea>
                     </div>
 
                     <div class="form-check">
@@ -232,56 +200,22 @@
                         Check me out
                       </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
+
+                    <input type="submit" name="submit" value="Submit" class="submit-button btn btn-primary">
+
                   </from>
 
                   <div class="info">
                     <p class="impress">
                       <span class="icon-corner-down-right"></span>
-                      Impressum
+                      <a href="impress.html" target="_blank">Impressum</a>
                     </p>
                   </div>
                 </div>
+
               </section>
 
    </main> <!-- wrapper end -->
-
-   <!-- musicplayer start -->
-   <div id="musicPlayer">
-
-     <div id="player-progress-bar-container">
-       <progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
-       <!--<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>-->
-     </div>
-
-     <div id="time-container">
-       <span class="amplitude-current-time time-container" amplitude-main-current-time="true"></span>
-       <span class="amplitude-duration-time time-container" amplitude-main-duration-time="true"></span>
-     </div>
-
-     <div id="coverBlock">
-       <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
-       <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
-     </div>
-
-     <div id="controls">
-       <span class="amplitude-prev icon-skip-back"></span>
-       <span class="button amplitude-play-pause" amplitude-main-play-pause="true"></span>
-       <span class="amplitude-next icon-skip-forward"></span>
-       <!--<span class="amplitude-mute"></span>-->
-     </div>
-
-     <div id="volume-container">
-				          <div class="volume-controls">
-				            <span class="amplitude-mute amplitude-not-muted"></span>
-				            <!-- <input type="range" class="amplitude-volume-slider"/>
-				            <div class="ms-range-fix"></div> -->
-				          </div>
-				          <!--<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>-->
-				        </div>
-
-    </div> <!-- musicplayer end -->
-
 
     <!-- js -->
     <script
@@ -298,16 +232,13 @@
     <script language="javascript" type="text/javascript"
               src="/bootstrap/dist/js/bootstrap.js"></script>
 
-    <!-- ampitude js - - musicplayer -->
-    <script language="javascript" type="text/javascript"
-              src="/amplitudejs/dist/amplitude.js"></script>
-
     <!-- onepage scroll js -->
     <script language="javascript" type="text/javascript"
               src="/js/jquery.onepage-scroll.js"></script>
 
     <!-- own js -->
     <script language="javascript" type="text/javascript" src="/js/index.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/onepagescroll.js"></script>
 
    </body>
 </html>
