@@ -23,13 +23,14 @@ $(document).ready(function(){
      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
-  //animation
+  //animation headlines function
   if( $('.headline').parent().hasClass('active') ){
     $('.headline').addClass('animated bounceInDown');
   }else{
     console.log('else');
   };
 
+  //animation content function
   if( $('.text').parent().hasClass('active') ){
     $('.text').addClass('animated bounceInDown');
   }else{

@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^rooq.productions/ROOQ-Project/index.html$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.rooq.productions/ROOQ-Project/index.html$
+RewriteCond %{REQUEST_URI} !/ROOQ-Project/public/
+RewriteRule (.*) /ROOQ-Project/public/$1 [L]
